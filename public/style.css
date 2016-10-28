@@ -1,0 +1,248 @@
+/*	font-family: 'Raleway', sans-serif;
+	font-family: 'Fredoka One', cursive;
+*/
+
+body{
+	background: #f0f0f0;
+	color: #555;
+	margin: 0;
+}
+p{
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	padding: 1%;
+}
+
+img{
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+.jumbotron {
+    position: relative;
+    margin-top: 75px;
+    background: #000 url("./img/gym-image.jpg") center center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    overflow: hidden;
+}
+.aboutme p {
+    display: inline;
+    background-color: white;
+    box-shadow: 1em 0 0 white, -1em 0 0 white;
+    padding: 0.5em 0em;
+    box-decoration-break: clone;
+}
+.testimony {
+	text-align: center;
+	color: black;
+    background: #000 url("./img/gym-testimony.jpg") center center;
+}
+a{
+	color:#FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover{
+	color: #FFF;
+	text-decoration: underline;
+}
+header{
+	background: black;
+	width: 100%;
+	height: 75px;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.90;
+}
+#logo{
+	margin: 15px;
+	float: left;
+	width: 100px;
+	height: 60px;
+}
+header a{
+	color: #ffff00;
+
+}
+nav{
+	float: right;
+	font-size: 23px;
+	font-family: 'Lato', sans-serif;
+	padding: 30px 20px 20px 0;
+}
+/*#section-icon{
+	width: px;
+	height: 65px;
+}*/
+#section-icon{
+	height: 200px;
+}
+
+#menu-icon{
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(./img/Facebook.png) no-repeat center;
+}
+section#infoSection p#title{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: bolder;
+	
+}
+section#infoSection p#description{
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px ;
+}
+section#infoSection p#time{
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px ;
+}
+
+a:hover#menu-icon{
+	border-radius: 4px 4px 0 0;
+}
+ul{
+	list-style: none;	
+}
+li a{
+		color: #ffff00;
+
+}
+nav ul li{
+	display: inline-block;
+	
+	 margin-right: 30px;
+
+}
+
+.current{
+	color: #FFF;
+	text-decoration: underline;	
+}
+#doc{
+	margin: 40px 0;
+}
+#content{
+	margin: 0 auto;
+	max-width: 1140px;
+	margin-top:110px;
+}
+.blueberry{
+	max-width: 300px;
+	margin-top: 110px;
+}
+section{
+	width: 29%;
+	float: left;
+	margin: 2% 2%;
+	text-align: center;
+}
+
+
+.clear{
+	clear:both;
+}
+article img{
+	width: 300px fixed;
+	height: 300px fixed;
+}
+article{
+	float:left;
+	margin: 0 auto;
+	width: 30%;
+	padding: 50px 10px 0 0;
+}
+aside{
+	float:left;
+	margin: 0 auto;
+	width: 70%;
+	height: auto;
+	padding: 50px 10px 30px 0;
+}
+footer{
+	background: black;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0.80;
+}
+footer p, footer h3{
+	color: #FFF;
+}
+footer p a{
+	color: #FFF;
+	text-decoration: none;
+}
+ul.social li{
+	display: inline;
+	float:left;
+}
+
+ul.social li img{
+	height: 50px;
+	width: 50px;
+	margin-top: 50px;
+	margin-left: 50%;
+	margin-right: 30%;
+}
+
+footer.second{
+	border-top:  1px solid #4D4E50;
+	background: #13133a;
+	max-height: 50px;
+	text-align: center;
+	opacity: 0.95;
+}
+@media screen and (max-width: 450px){
+	body{
+		position: absolute;
+	}
+}
+@media screen and (max-width: 740px){
+	header{
+		position: absolute;
+	}
+	#menu-icon{
+		display: inline-block;
+	}
+	nav ul, nav:active ul{
+		display: none;
+/*		position: absolute;
+*/		padding: 20px;
+		background: #405580;
+		border: 1px solid #FFF;
+		right:20px;
+		top:60px;
+		width: 50%;
+		border-radius: 2px 0 2px 2px;
+	}
+	nav li{
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav:hover ul{
+		display: block;
+	}
+	section{
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	article{
+		width: 100%;
+		margin: auto;
+	}
+	aside{
+		width: 100%;
+		margin: auto;
+	}
+}
