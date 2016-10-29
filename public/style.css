@@ -19,15 +19,19 @@ img{
 	height: auto;
 	width: auto;
 }
+
 .jumbotron {
-    position: relative;
+/*    position: relative;*/
     margin-top: 75px;
     background: #000 url("./img/gym-image.jpg") center center;
-    width: 100%;
-    height: 500px;
-    background-size: cover;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
     overflow: hidden;
+    margin-bottom: 0px;
 }
+
 .aboutme p {
     display: inline;
     background-color: white;
@@ -70,7 +74,6 @@ header a{
 
 }
 nav{
-	float: right;
 	font-size: 23px;
 	font-family: 'Lato', sans-serif;
 	padding: 30px 20px 20px 0;
@@ -89,7 +92,10 @@ nav{
 	height: 40px;
 	background: url(./img/Facebook.png) no-repeat center;
 }
-section#infoSection p#title{
+
+
+
+/*section#infoSection p#title{
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	font-weight: bolder;
@@ -103,7 +109,7 @@ section#infoSection p#time{
 	font-family: 'Raleway', sans-serif;
 	font-size: 13px ;
 }
-
+*/
 a:hover#menu-icon{
 	border-radius: 4px 4px 0 0;
 }
@@ -245,4 +251,38 @@ footer.second{
 		width: 100%;
 		margin: auto;
 	}
+}
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+ 
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#disabledLogo {
+   pointer-events: none;
+   cursor: default;
+   float: left;
+   margin-left: 15px;
+}
+
+#tryProduct{
+	float: right;
 }

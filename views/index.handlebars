@@ -12,63 +12,87 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway|Fredoka+One|Oxygen|Lato' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body style="background-color: #1a1a1a;">
+	
+
+<!-- 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="#">GymTracker</a>        
+	        </div>
+	        <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav">
+	                <li class="active"><a href="#">Log In</a></li>
+
+	                 <li><a href="http://ixd.ucsd.edu/home/f16/index.php#calendar">Calendar</a></li>                
+	                <li><a href="http://ixd.ucsd.edu/home/f16/studio.php">Studio</a></li>                
+	                <li><a href="http://ixd.ucsd.edu/home/f16/mobile_app_tips.php">Development Resources</a></li>
+
+	                <!- <li class="dropdown"><a href="http://ixd.ucsd.edu/home/f16/logistics.php" class="dropdown-toggle disabled" data-hover="dropdown">Logistics <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#prereqs">Prerequisites</a></li><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#laptop">Equipment</a></li><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#lab">Lab</a></li><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#assignments">Assignments</a></li><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#grading">Grading</a></li><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#faq">FAQ</a></li></ul></li>                <!-<li><a href="http://ixd.ucsd.edu/app">Submit work</a></li>-->
+	<!--                 
+	            </ul>
+	        </div> -->
+	        <!--/.nav-collapse -->
+<!-- 	    </div>
+	</div> --> 
 	<header>
-
-		<a href="#" id="logo">Gymtracker</a>
 		<nav>
-			<a href="#" id="menu-icon"> </a>
-
-			<ul>
-				<li> <a href="#" class="current"> Try our product </a> </li>
-				<li> <a href="#"></a> </li>
-
-
-		</ul>
-		<nav>
+			<a href="#" id="disabledLogo">Gymtracker</a>
+			<a href="#" id="tryProduct">Try Our Product</a>
+		</nav>
 	</header>
-
-		<div class="jumbotron"	background-color: red>
-			<div class="container" >
-
+	<div  background-color: white>
+		<div class="jumbotron">
+			<div class="container">
 				<aside>
-					<ul class = "aboutme wow fadeInRight animated" id="resume" data-wow-delay="0.3s">
+					<ul class = "aboutme wow fadeInRight animated" data-wow-delay="0.3s">
 						<li><p>You are born weak and die weak, what you are in between those two periods of time is up to you<br>
 						</p> <br>
 						<p>We are here to <b><u>motivate</u></b> you!</p>
 
 						</li>
 
-				</ul>
-			</aside>
+					</ul>
+				</aside>
+			</div>
 		</div>
 	</div>
-	<div class ="container wow zoomIn animated" data-wow-delay="0.3s">
-		<section id="infoSection">
-			<img id="section-icon" src="./img/tracking-progress.jpg">
+	<div class="container">
+		<div class ="wow zoomIn animated" " data-wow-delay="0.3s">
 
-		</section>
-		<section id="infoSection">
-			<img id="section-icon" src="./img/small-goals.png">
+			<section id="infoSection">
+				<img id="section-icon" src="./img/tracking-progress.jpg">
+			</section>
 
-		</section>
-		<section id="infoSection">
-			<img id="section-icon" src="./img/todo-list.jpg">
+			<section id="infoSection">
+				<img id="section-icon" src="./img/small-goals.png">
+			</section>
 
+			<section id="infoSection">
+				<img id="section-icon" src="./img/todo-list.jpg">
+			</section>
 
-		</section>
+		</div>
 	</div>
 	<div class="clear"></div>
 
 	<div class="testimony">
 		<h1>Testimony</h1>
-		<iframe width="640" height="360" src="https://www.youtube.com/embed/v0uscIbY3nk" frameborder="0" allowfullscreen></iframe>
+		<div class="intrinsic-container">
+			<iframe src="https://www.youtube.com/embed/v0uscIbY3nk" allowfullscreen></iframe>
+		</div>
 	</div>
 
 	<div class="clear"></div>
 
 	<footer id="contact">
-		<div class="wow zoomIn animated" data-wow-delay="0.2s">
+		<div class="wow zoomIn animated" data-wow-delay="0.2s center-block">
 			<section>
 				<h3><b> Gymtracker .Inc</b> </h3>
 				<p><b>650-520-0599</b><br><br>
@@ -98,6 +122,8 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./javascript/jquery-code.js"></script>
 
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
