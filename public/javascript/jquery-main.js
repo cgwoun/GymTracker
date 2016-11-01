@@ -1,11 +1,39 @@
+var ctx;
+var currentActivity="";
+
+
 $(document).ready(function()
 {
 	$("#addCategory").click(addACategory);
 	$(".addActivity").click(addAnActivity);
 	$(".activity").click(changedActivity);
 	$("#graph-button").click(addtoGraph);
+	ctx = document.getElementById("myChart");
+	var myChart = new Chart(ctx, {
+    type: 'bar',
+    responsive: true,
+    data: {
+        labels: ["Red", "Blue", "Green"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3]
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
 });
-var currentActivity="";
+});
+
+Chart.defaults.global.responsive = true;
+
+
 function addACategory(event)
 {
 		alert("This will let you add an category!");
@@ -26,7 +54,7 @@ function changedActivity(event)
 
 function addtoGraph(event)
 {
-	 if(currentActivity=="")
+	if(currentActivity=="")
 	 {
 	 	alert("This button will let you add to the graph for this activity!");
 	 }
@@ -35,3 +63,4 @@ function addtoGraph(event)
 	 	alert("This button will let you add to the graph for activity "+currentActivity);
 	 }
 }
+
