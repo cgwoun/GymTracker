@@ -12,7 +12,6 @@ var index = require('./routes/index');
 
 var main = require('./routes/main');
 
-
 // Example route
 // var user = require('./routes/user');
 
