@@ -39,7 +39,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/main.html',main.view)
+app.get('/main',main.view)
 
 // Example route
 // app.get('/users', user.list);
