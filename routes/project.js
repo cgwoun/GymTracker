@@ -1,8 +1,8 @@
-exports.viewProject = function(req, res){
+var data = require(../data.json);
+
+exports.viewMain = function(req, res){
 	//controller goes here
 	var name = req.params.name;
-	console.log('The project name is: ' + name);
-	res.render('project', {
-		'projectName': name
-	});
+	console.log('The main person\'s name is: ' + name);
+	res.render('main', data);
 }
