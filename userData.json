@@ -28,7 +28,16 @@
 					"activities": [
 						{
 							"activityName": "Blank",
-							"data": []
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
 						},
 						{
 							"activityName": "Push up 1",

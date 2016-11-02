@@ -2,8 +2,8 @@
 /*
  * GET main page.
  */
+
 var data =require("../userData.json");
-var dict={}
 
 exports.view = function(req, res){
   var nameToShow	=	req.params.uName;	
@@ -24,5 +24,6 @@ exports.view = function(req, res){
   console.log("dict is")
 //  console.log(dict)
 
-  res.render('main');
+  res.render('main',data);
+
 };
