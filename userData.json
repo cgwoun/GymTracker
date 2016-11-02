@@ -45,6 +45,285 @@
 						}
 					]
 
+				},
+				{
+					"categoryName": "Triceps",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Back",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Biceps",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Cardio",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Other",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				}
+
+			]		
+		},
+		{
+			"id": "allan",
+			"password": "lol",
+			"categories": [
+				{
+					"categoryName": "Chest",
+					"activities": [
+						{
+							"activityName": "Push - up",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						}
+					]
+
+				},
+				{
+					"categoryName": "Shoulders",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Triceps",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Back",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Biceps",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Cardio",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				},
+				{
+					"categoryName": "Other",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
 				}
 
 			]		
