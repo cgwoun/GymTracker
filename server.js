@@ -11,9 +11,11 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 
 var main = require('./routes/main');
+var login = require('./routes/login');
 
 // Example route
 // var user = require('./routes/user');
+var data = require('./userData.json');
 
 var app = express();
 
@@ -39,6 +41,8 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+console.log(data);
+app.get('/login', login.view);
 app.get('/main',main.view)
 
 // Example route

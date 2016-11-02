@@ -1,0 +1,45 @@
+{
+	"users": [
+		{
+			"id": "trung",
+			"password": "trung",
+			"imageURL": "",
+			"categories": [
+				{
+					"categoryName": "Chest",
+					"activities": [
+						{
+							"activityName": "Push - up",
+							"data": [
+								{
+									"date": "01/01/2016",
+									"set1": "12",
+									"set2": "30",
+									"set3": "20",
+									"set4": "0",
+									"set5": "0"
+								}
+							]
+						}
+					]
+
+				},
+				{
+					"categoryName": "Shoulders",
+					"activities": [
+						{
+							"activityName": "Blank",
+							"data": []
+						},
+						{
+							"activityName": "Push up 1",
+							"data": []
+						}
+					]
+
+				}
+
+			]		
+		}
+	]
+}
