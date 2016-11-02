@@ -44,15 +44,15 @@ img{
 	color: black;
     background: #000 url("./img/gym-testimony.jpg") center center;
 }
-/*a{
+a{
 	color:#FFF;
 	text-decoration: none;
 	font-weight: bold;
-}*/
-/*a:hover{
+}
+a:hover{
 	color: #FFF;
 	text-decoration: underline;
-}*/
+}
 header{
 	background: black;
 	width: 100%;
@@ -78,10 +78,10 @@ header a{
 	font-family: 'Lato', sans-serif;
 	padding: 30px 20px 20px 0;
 }
-/*#section-icon{
+#section-icon{
 	width: px;
 	height: 65px;
-}*/
+}
 #section-icon{
 	height: 200px;
 }
@@ -95,7 +95,7 @@ header a{
 
 
 
-/*section#infoSection p#title{
+section#infoSection p#title{
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	font-weight: bolder;
@@ -109,7 +109,7 @@ section#infoSection p#time{
 	font-family: 'Raleway', sans-serif;
 	font-size: 13px ;
 }
-*/
+
 a:hover#menu-icon{
 	border-radius: 4px 4px 0 0;
 }
@@ -118,15 +118,15 @@ ul{
 }
 
 
-/*li a{
+li a{
 		color: #ffff00;
 
-}*/
+}
 
-/*nav ul li{
+nav ul li{
 	display: inline-block;
 	 margin-right: 30px;
-}*/
+}
 
 .current{
 	color: #FFF;
@@ -219,7 +219,7 @@ footer.second{
 	#menu-icon{
 		display: inline-block;
 	}
-/*	nav ul, nav:active ul{
+	nav ul, nav:active ul{
 		display: none;
 		position: absolute;
 		padding: 20px;
@@ -254,7 +254,7 @@ footer.second{
 		width: 100%;
 		margin: auto;
 	}
-*/
+
 }
 .intrinsic-container {
   position: relative;
