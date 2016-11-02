@@ -1,33 +1,62 @@
--{
- -	"users": [
- -		{
- -			"id": "trung",
- -			"password": "trung",
- -			"chestExercises" : [
- -				{
- -				"activityName": "Push up",
- -				"data": [1, 5, 9, 6, 4],
- -				"units": "Repetitions"
- -				},
- -				{
- -					"activityName": "Bench Press",
- -					"data": [10, 30, 50, 60],
- -					"units": "Pounds"
- -				}
- -				],
- -			"shoulderExercises" : [
- -				{
- -					"activityName": "Shoulder Press",
- -					"data": [7, 18, 20, 99, 20],
- -					"units": "Pounds"
- -				},
- -				{
- -					"activityName": "Shrugs",
- -					"data": [5, 10, 15, 20],
- -					"units": "Repetitions"
- -				}
- -				]
- -		
- -		}
- -	]
- -}
+{
+ 	"users": [
+ 		{
+ 			"id": "trung",
+ 			"password": "trung",
+ 			"chestExercises" : [
+ 				{
+ 				"activityName": "Push up",
+ 				"data": [1, 5, 9, 6, 4],
+ 				"units": "Repetitions"
+ 				},
+ 				{
+ 					"activityName": "Bench Press",
+ 					"data": [10, 30, 50, 60],
+ 					"units": "Pounds"
+ 				}
+ 			],
+ 			"shoulderExercises" : [
+ 				{
+ 					"activityName": "Shoulder Press",
+ 					"data": [7, 18, 20, 99, 20],
+ 					"units": "Pounds"
+ 				},
+ 				{
+ 					"activityName": "Shrugs",
+ 					"data": [5, 10, 15, 20],
+ 					"units": "Repetitions"
+ 				}
+ 			]
+ 		
+ 		},
+ 		{
+ 			"id": "Chang",
+ 			"password": "Chang",
+ 			"chestExercises" : [
+ 				{
+ 				"activityName": "Push up",
+ 				"data": [1, 5, 9, 6, 4],
+ 				"units": "Repetitions"
+ 				},
+ 				{
+ 					"activityName": "Bench",
+ 					"data": [10, 30, 50, 60],
+ 					"units": "Pounds"
+ 				}
+ 			],
+ 			"shoulderExercises" : [
+ 				{
+ 					"activityName": "Shoulder Pulls",
+ 					"data": [7, 18, 20, 99, 20],
+ 					"units": "Pounds"
+ 				},
+ 				{
+ 					"activityName": "Incline Press",
+ 					"data": [5, 10, 15, 20],
+ 					"units": "Repetitions"
+ 				}
+ 			]
+ 		}
+
+ 	]
+ }
