@@ -27,40 +27,6 @@
 </head>
 
 <body>
-
-<!-- 	<header>
-
-			<div class="navbar navbar-inverse navbar-fixed-left">
-				<ul class="nav navbar-nav">
-					<li><a href="#">Gymtracker</a></li> 
-
-
-					<li><a id="Overview" href="./main.html">Overview</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bicep Exercises <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a class="activity" href="#">Curls</a></li>
-							<li><a class="activity" href="#">Pull-ups</a></li>
-							<li><a class="addActivity" href="#">Add an Activity!</a></li>
-						</ul>
-					</li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Chest Exercises<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a class="activity" href="#">Push-ups</a></li>
-							<li><a class="activity" href="#">Bench-press</a></li>
-							<li><a class="addActivity" href="#">Add an Activity!</a></li>
-						</ul>
-					</li>
-
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="./settings.html">Change your information</a></li>
-						</ul>
-					</li>
-					<li><a id="addCategory" >Add a Category!</a></li>
-
-				</ul>
-			</div>
-	</header> -->
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -146,29 +112,6 @@
                     <li><a class="addActivity" href="#">Add an Activity!</a></li>
                   </ul>
                 </li>
-                <!--
-                <li><a href="http://ixd.ucsd.edu/home/f16/mobile_app_tips.php">Other</a></li>
-
-                <li class="dropdown">
-                  <a href="http://ixd.ucsd.edu/home/f16/logistics.php" class="dropdown-toggle disabled" data-hover="dropdown">Logistics <b class="caret"></b></a>
-
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="http://ixd.ucsd.edu/home/f16/logistics.php#prereqs">Prerequisites</a></li><li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#laptop">Equipment</a>
-                    </li>
-                    <li><a href="http://ixd.ucsd.edu/home/f16/logistics.php#lab">Lab</a></li>
-                    <li>
-                      <a href="http://ixd.ucsd.edu/home/f16/logistics.php#assignments">Assignments</a>
-                    </li>
-                    <li>
-                      <a href="http://ixd.ucsd.edu/home/f16/logistics.php#grading">Grading</a>
-                    </li>
-                    <li>
-                      <a href="http://ixd.ucsd.edu/home/f16/logistics.php#faq">FAQ</a>
-                    </li>
-                  </ul>
-                </li>
-                -->
            </ul>
         </div>
         <!--/.nav-collapse -->
@@ -181,31 +124,62 @@
 					</div>
 					<!--This is the chart!-->
 					<canvas id="myChart"></canvas>
-					<button id="graph-button" type="button" class="btn btn-default">Add Data</button>
+
+				<!-- Table -->
+				<div class="container">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						    <h4>
+						        Workout Name 
+						    </h4>
+						</div>
+						<div style="height: 240px; overflow: auto;">
+							<table class="table table-striped">
+							  <thead>
+							    <tr>
+							      <th class="col-xs-6">Date</th>
+							      <th class="col-xs-6">Repetitions</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td>1</td>
+							      <td>Something</td>
+							    </tr>
+							    <tr>
+							      <td>2</td>
+							      <td>Something</td>
+							    </tr>
+							    <tr>
+							      <td>3</td>
+							      <td>Something</td>
+							    </tr>
+							    <tr>
+							      <td>4</td>
+							      <td>Something</td>
+							    </tr>
+							    <tr>
+							      <td>5</td>
+							      <td>Something</td>
+							    </tr>
+							    <tr>
+							      <td>6</td>
+							      <td>Something</td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Input Form and Button -->
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Number of Repititions">
+					  <span class="input-group-btn">
+					    <button id="graph-button" type="button" class="btn btn-default">Add Repetitions!</button>
+					  </span>
+					</div>					
+				</div>
 			</div>
 		</div>
-<!-- 		<footer id="contact">
-		<div class="wow zoomIn animated" data-wow-delay="0.2s">
-		
-				<h3><b> Gymtracker .Inc</b> </h3>
-				<p><b>650-520-0599</b><br><br>
-					gymtracker@gmail.com<br><br>
-					
-
-				</p>
-			
-				<ul class="social">
-					<div class="container">
-						<li><a href="https://www.facebook.com"> <img src="./img/Facebook.png"/> </a></li>
-						<li><a href="https://www.instagram.com"> <img src="./img/instagram.png"/> </a></li>
-					</div>
-				</ul>
-		
-		</div>
-	</footer>
-	<footer class="second">
-		<p>Copyright Gymtracker</p>
-	</footer> -->
 </body>
 </html>
 

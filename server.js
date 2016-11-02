@@ -43,7 +43,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 console.log(data);
 app.get('/login', login.view);
-app.get('/main',main.view)
+app.get('/main', main.view)
 
 // Example route
 // app.get('/users', user.list);
