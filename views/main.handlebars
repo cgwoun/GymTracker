@@ -123,10 +123,13 @@
 			<div	class="project"	id="{{id}}">	
 		 	 	 <p>Id = {{id}}</p>	
 		 	 	 <p>password = {{password}}</p>	
+
 		 	 	 {{#each categories}}
 		 	 	 <p>category name = {{categoryName}}</p>
+
 		 	 	 	{{#each activities}}
 		 	 		 <p>activities name = {{activityName}}</p>
+
 		 	 	 		{{#each data}}
 		 	 		 	<p>date = {{date}}</p>
 		 	 		 	<p>set 1 = {{set1}}</p>
@@ -135,13 +138,12 @@
 		 	 		 	<p>set 4 = {{set4}}</p>
 		 	 		 	<p>set 4 = {{set5}}</p>
 		 	 	 		{{/each}}
+
 		 	 	 	{{/each}}
 
 		 	 	 {{/each}}
-
-		 	 </a>	
 		 </div>	
-	{{/each}}
+		{{/each}}
   		</div>
   		<div class="container" style="margin-top: 55px;">
 			<div id="main">

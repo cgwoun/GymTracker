@@ -3,52 +3,31 @@
 		{
 			"id": "trung",
 			"password": "trung",
-			"imageURL": "",
-			"categories": [
+			"chestExercises" : [
 				{
-					"categoryName": "Chest",
-					"activities": [
-						{
-							"activityName": "Push - up",
-							"data": [
-								{
-									"date": "01/01/2016",
-									"set1": "12",
-									"set2": "30",
-									"set3": "20",
-									"set4": "0",
-									"set5": "0"
-								}
-							]
-						}
-					]
-
+				"activityName": "Push up",
+				"data": [1, 5, 9, 6, 4],
+				"units": "Repetitions"
 				},
 				{
-					"categoryName": "Shoulders",
-					"activities": [
-						{
-							"activityName": "Blank",
-							"data": [
-								{
-									"date": "01/01/2016",
-									"set1": "12",
-									"set2": "30",
-									"set3": "20",
-									"set4": "0",
-									"set5": "0"
-								}
-							]
-						},
-						{
-							"activityName": "Push up 1",
-							"data": []
-						}
-					]
-
+					"activityName": "Bench Press",
+					"data": [10, 30, 50, 60],
+					"units": "Pounds"
 				}
-
-			]		
+				],
+			"shoulderExercises" : [
+				{
+					"activityName": "Shoulder Press",
+					"data": [7, 18, 20, 99, 20],
+					"units": "Pounds"
+				},
+				{
+					"activityName": "Shrugs",
+					"data": [5, 10, 15, 20],
+					"units": "Repetitions"
+				}
+				]
+		
 		}
 	]
 }
