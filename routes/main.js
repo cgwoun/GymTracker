@@ -14,9 +14,7 @@ exports.view = function(req, res){
   	console.log(user);
   	console.log("user categories is")
   	console.log(user.categories)
-  	for(var category in user.categories){
-  		console.log(category);
-  	}
+  	
   }
 
 
