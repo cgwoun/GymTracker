@@ -6,22 +6,24 @@
 var data =require("../userData.json");
 
 exports.view = function(req, res){
-  var nameToShow	=	req.params.uName;	
-
-  for(var users in data){
-  	var user = data[users][0];
-  	console.log("user is");
-  	console.log(user);
-  	console.log("user categories is")
-  	console.log(user.categories)
+  //console.log(req);
+  //console.log(req.url);
+  var nameToShow	=	req.query["uname"];	
+  console.log(data.users)
+  //user is an iterator, 0 1 2 etc...
+  var categories;
+  for(var index in data.users){
+  	//so this takes the 0 1 2 index and looks for an id
+  	//console.log("user is "+ data.users[user].id);
+  	var id=data.users[index].id
+  	if(id==nameToShow&&id!=undefined){
+  		categories=data.users[index].categories;
+  		console.log("categories is")
+  		console.log(categories)
+  		break;
+  	}
   	
   }
-
-
-
-  console.log("dict is")
-//  console.log(dict)
-
-  res.render('main',data);
+  res.render('main',{'categories':categories});
 
 };
