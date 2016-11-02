@@ -10,7 +10,7 @@ $(document).ready(function()
 	$("#graph-button").click(addtoGraph);
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     responsive: true,
     data: {
         labels: ["Red", "Blue", "Green"],
