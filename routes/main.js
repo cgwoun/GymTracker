@@ -25,8 +25,29 @@ exports.view = function(req, res){
   		//console.log(categories)
   		break;
   	}
-  	
   }
-  res.render('main',{'categorie':categories, 'name':nameToShow, 'nameMenu': nameMenu});
 
+  //console.log(categories);
+  console.log(categories);
+  console.log('break');
+  //Gets the default main page exercise and activity
+  var defaultCategory;
+  var defaultActivity;
+  for(var x in categories){
+  	if(categories[x].activities.length !== 0){
+  		defaultCategory = categories[x];
+  		defaultActivity = categories[x].activities[0];
+  		break;
+  	}
+  }
+
+  console.log(defaultActivity);
+  console.log(defaultCategory);
+
+  var query = JSON.stringify(req.query);
+
+  res.render('main',{'categorie':categories, 'qwer': query,'defaultCategory':defaultCategory, 
+  					'defaultActivity':defaultActivity, 'name':nameToShow});
 };
+
+

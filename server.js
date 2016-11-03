@@ -18,7 +18,7 @@ var activity = require('./routes/activity');
 // var user = require('./routes/user');
 var data = require('./userData.json');
 
-var app = express();
+app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -45,7 +45,6 @@ app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/activity/:name', activity.view);
 app.get('/main', main.view);
-app.get('/main/:nameMenu', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/activity/addActivity/:uname', addActivity.addActivities);
 
