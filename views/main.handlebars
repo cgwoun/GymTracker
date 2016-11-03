@@ -45,7 +45,7 @@
         <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    {{#each categories}}
+                    {{#each categorie}}
                 	<li>
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{categoryName}}<b class="caret"></b></a>
 	                	<ul class="dropdown-menu" role="menu">
@@ -53,10 +53,11 @@
 		                  	<!-- Change this later to list all activities for a specific user using jquery-->
 		                    	<li><a class="activity" href="#">{{activityName}}</a></li>
 		                    {{/each}}
-		                    <li class="addActivity"><a class="activity" href="#">Add an activity!</a></li>
+		                    <!-- <li class="addActivity"><a class="activity" href="#">Add an activity!</a></li> -->
 	                  	</ul>
                 	</li>
                 	{{/each}}
+                	<li><a class="activity" href="./activity/{{name}}">Add an activity!</a></li>
                 </li>
            </ul>
         </div>
@@ -92,12 +93,11 @@
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td>1</td>
-							      <td>Something</td>
+							      <td>1</td><td>Something</td>
 							    </tr>
 							    <tr>
-							      <td>2</td>
-							      <td>Something</td>
+							      <td>2</td><td>Something</td>
+
 							    </tr>
 							    <tr>
 							      <td>3</td>

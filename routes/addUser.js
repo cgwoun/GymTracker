@@ -1,6 +1,6 @@
 var data = require("../userData.json");
 
-exports.addUser = function(req, res){
+exports.addUsers = function(req, res){
 	console.log("adding new user!");
 
 	var name = req.query.name;

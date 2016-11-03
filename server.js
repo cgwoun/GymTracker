@@ -9,11 +9,11 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-
 var main = require('./routes/main');
 var login = require('./routes/login');
-var add = require('./routes/addUser');
-
+var addUser = require('./routes/addUser');
+var addActivity = require('./routes/addActivity');
+var activity = require('./routes/activity');
 // Example route
 // var user = require('./routes/user');
 var data = require('./userData.json');
@@ -43,8 +43,11 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/login', login.view);
+app.get('/activity/:name', activity.view);
 app.get('/main', main.view);
-app.get('/add', add.addUser);
+app.get('/main/:nameMenu', main.view);
+app.get('/addUser', addUser.addUsers);
+app.get('/activity/addActivity/:uname', addActivity.addActivities);
 
 // Example route
 // app.get('/users', user.list);
