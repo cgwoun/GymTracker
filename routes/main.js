@@ -46,7 +46,7 @@ exports.view = function(req, res){
 
   var query = JSON.stringify(req.query);
 
-  res.render('main',{'categorie':categories, 'qwer': query,'defaultCategory':defaultCategory, 
+  res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 
   					'defaultActivity':defaultActivity, 'name':nameToShow});
 };
 
