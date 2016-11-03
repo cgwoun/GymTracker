@@ -25,6 +25,7 @@ exports.view = function(req, res){
   //console.log(categories);
   // console.log(categories);
   // console.log('break');
+  
   //Gets the default main page exercise and activity
   var defaultCategory;
   var defaultActivity;
@@ -36,8 +37,8 @@ exports.view = function(req, res){
   	}
   }
 
-  console.log(defaultActivity);
-  console.log(defaultCategory);
+  // console.log(defaultActivity);
+  // console.log(defaultCategory);
 
   // var query = JSON.stringify(req.query);
 
