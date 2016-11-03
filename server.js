@@ -14,6 +14,7 @@ var login = require('./routes/login');
 var addUser = require('./routes/addUser');
 var addActivity = require('./routes/addActivity');
 var activity = require('./routes/activity');
+var motivate = require('./routes/motivate');
 // Example route
 // var user = require('./routes/user');
 var data = require('./userData.json');
@@ -43,8 +44,9 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/login', login.view);
+app.get('/motivate', motivate.view);
 app.get('/activity/:name', activity.view);
-app.get('/main', main.view);
+app.get('/main/:name/:defaultCategory/:defaultActivity', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/activity/addActivity/:uname', addActivity.addActivities);
 
