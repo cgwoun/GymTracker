@@ -10,6 +10,7 @@ $(document).ready(function()
 	$("#graph-button").click(addtoGraph);
 	var array=$("#array").text();
 	var parsedArray=parseToArray(array);
+	renderTable(parsedArray);
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
     type: 'line',
@@ -64,6 +65,19 @@ function addtoGraph(event)
 	 {
 	 	alert("This button will let you add to the graph for activity "+currentActivity);
 	 }
+}
+function renderTable(array){
+	var iter=1;
+	console.log("in renderTable "+array)
+	for(element in array){
+		console.log("element is "+ array[element]);
+		var html="<tr><td>"+iter+"</td><td>"+array[element]+"</td></tr>";
+		console.log(html);
+		$("#tableBody").append (html);
+		console.log($("#tableBody"));
+		iter++;
+	}
+
 }
 
 function parseToArray(htmlText)
