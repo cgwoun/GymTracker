@@ -20,7 +20,6 @@ var motivate = require('./routes/motivate');
 var data = require('./userData.json');
 
 app = express();
-
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -46,7 +45,7 @@ app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/motivate', motivate.view);
 app.get('/activity/:name', activity.view);
-app.get('/main/:name/:defaultCategory/:defaultActivity', main.view);
+app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/activity/addActivity/:uname', addActivity.addActivities);
 

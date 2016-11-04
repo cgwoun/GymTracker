@@ -33,6 +33,8 @@ exports.view = function(req, res){
   	if(categories[x].activities.length !== 0){
   		defaultCategory = categories[x].categoryName;
   		defaultActivity = categories[x].activities[0].activityName;
+      defaultActivityArray=categories[x].activities[0].data;
+
   		break;
   	}
   }
@@ -43,5 +45,5 @@ exports.view = function(req, res){
   // var query = JSON.stringify(req.query);
 
   res.render('motivate',{'categorie':categories, 'defaultCategory':defaultCategory, 
-  					'defaultActivity':defaultActivity, 'name':nameToShow});
+  					'defaultActivity':defaultActivity, 'name':nameToShow,'dataArray':defaultActivityArray});
 };

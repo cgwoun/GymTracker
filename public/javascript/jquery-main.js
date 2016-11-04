@@ -8,15 +8,17 @@ $(document).ready(function()
 	$(".addActivity").click(addAnActivity);
 	$(".activity").click(changedActivity);
 	$("#graph-button").click(addtoGraph);
+	var array=$("#array").text();
+	var parsedArray=parseToArray(array);
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
     type: 'line',
     responsive: true,
     data: {
-        labels: ["Red", "Blue", "Green"],
+        labels: ["Day1", "Day2", "Day3","Day4"],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3]
+            data: parsedArray
         }]
     },
     options: {
@@ -64,3 +66,9 @@ function addtoGraph(event)
 	 }
 }
 
+function parseToArray(htmlText)
+{
+	var myArray=htmlText.split(",");
+	for(var i=0; i<myArray.length; i++) { myArray[i] = +myArray[i]; } 
+	return myArray
+}

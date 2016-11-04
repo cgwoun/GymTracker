@@ -51,7 +51,7 @@
 	                	<ul class="dropdown-menu" role="menu">
 		                	{{#each activities}}
 		                  	<!-- Change this later to list all activities for a specific user using jquery-->
-		                    	<li><a class="activity" href="#">{{activityName}}</a></li>
+		                    	<li><a class="activity" href="/main/{{../../name}}/{{../categoryName}}/{{activityName}}/{{../../dataArray}}">{{activityName}}</a></li>
 		                    {{/each}}
 		                    <!-- <li class="addActivity"><a class="activity" href="#">Add an activity!</a></li> -->
 	                  	</ul>
@@ -129,7 +129,8 @@
 				</div>
 			</div>
 		</div>
-
+		<a id="array">{{dataArray}}</a>
+		<p> {% data %} </p>
 		<script src="/javascript/bootstrap.js"></script>
 </body>
 </html>

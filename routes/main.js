@@ -23,18 +23,52 @@ exports.view = function(req, res){
   }
 
   //Gets the default main page exercise and activity
-  var defaultCategory;
-  var defaultActivity;
-  for(var x in categories){
-  	if(categories[x].activities.length !== 0){
-  		defaultCategory = categories[x];
-  		defaultActivity = categories[x].activities[0];
-  		break;
-  	}
+  var currentActivity=req.params.defaultActivity
+  var currentCategory=req.params.defaultCategory
+  var defaultActivityArray=req.params.defaultActivityArray
+  console.log("current activity is" +currentActivity);
+  if(currentActivity ==null){
+
+    console.log("no current activity!")
+    var defaultCategory;
+    var defaultActivity;
+    for(var x in categories){
+      if(categories[x].activities.length !== 0){
+        defaultCategory = categories[x];
+        defaultActivity = categories[x].activities[0];
+        defaultActivityArray=categories[x].activities[0].data;
+
+        break;
+      }
+    }
+    currentActivity=defaultActivity
+    defaultActivity = categories[x].activities[0];
+    defaultActivityArray=categories[x].activities[0].data;
   }
+  else{
+    console.log("else, " +currentActivity)
+    console.log("currentCategory "+currentCategory)
+    for(var x in categories){
+      //console.log("categories["+x+"].categoryName is "+categories[x].categoryName)
+      if(categories[x].categoryName==currentCategory){
+        //console.log("matched!" );
+       // console.log(categories[x].activities)
+        for(var y in categories[x].activities){
+        //  console.log(categories[x].activities[y]);
+          if(categories[x].activities[y].activityName==currentActivity){
+            defaultActivityArray=categories[x].activities[y].data
+            console.log("found data for the currentActivity");
+            console.log(defaultActivityArray);
+          }
+        }
+      }
+    }
+
+  }
+  
 
   res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 
-  					'defaultActivity':defaultActivity, 'name':nameMenu});
+  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray});
 };
 
 
