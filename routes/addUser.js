@@ -3,9 +3,7 @@ var data = require("../userData.json");
 exports.addUsers = function(req, res){
 	console.log("adding new user!");
 
-	var name = req.query.name;
-	var pass = req.query.pass;
-
+  var userName = req.params.uname;
 	var newUser = {
 		"id": name,
 		"password": pass,
