@@ -17,7 +17,7 @@ $(document).ready(function()
     data: {
         labels: ["Day1", "Day2", "Day3","Day4"],
         datasets: [{
-            label: '# of Votes',
+            label: 'Progression',
             data: parsedArray
         }]
     },

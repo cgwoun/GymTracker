@@ -17,14 +17,18 @@ exports.view = function(req, res){
   //Gets the default main page exercise and activity
   var defaultCategory;
   var defaultActivity;
+  var defaultArray;
   for(var x in categories){
   	if(categories[x].activities.length !== 0){
   		defaultCategory = categories[x].categoryName;
   		defaultActivity = categories[x].activities[0].activityName;
+      defaultArray = categories[x].activities[0].data;
   		break;
   	}
   }
 
+
+
   res.render('activity',{'defaultCategory':defaultCategory, 
-  					'defaultActivity':defaultActivity, 'uname':name});
+  					'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'uname':name});
 };
