@@ -12,12 +12,14 @@ $(document).ready(function()
 	var array=$("#array").text();
 	var parsedArray=parseToArray(array);
 	renderTable(parsedArray);
+	var labelArray=createLabelArray(parsedArray);
+	console.log(labelArray);
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
     type: 'line',
     responsive: true,
     data: {
-        labels: ["Day1", "Day2", "Day3","Day4"],
+        labels: labelArray,
         datasets: [{
             label: 'Progression',
             data: parsedArray
@@ -93,5 +95,16 @@ function parseToArray(htmlText)
 	var myArray=htmlText.split(",");
 	for(var i=0; i<myArray.length; i++) { myArray[i] = +myArray[i]; } 
 	return myArray
+}
+
+function createLabelArray(array){
+	var iter=1;
+	var labelArray=[]
+	console.log("in renderTable "+array)
+	for(element in array){
+		labelArray.push(("Day"+iter))
+		iter++;
+	}
+	return labelArray
 }
 
