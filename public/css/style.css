@@ -23,7 +23,7 @@ img{
 .jumbotron {
 /*    position: relative;*/
     margin-top: 75px;
-    background: #000 url("./img/gym-image.jpg") center center;
+    background: #000 url("/img/gym-image.jpg") center center;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
