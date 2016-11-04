@@ -2,13 +2,20 @@
 <html>
 <!-- 	<link rel ="stylesheet" href="style-login.css" type = "text/css" /> -->
   <link href="/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/motivate-page.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
-    <body>
+<body>
+  <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+  <iframe opacity=".5" frameborder="0" height="100%" width="100%" 
+    src="https://youtube.com/embed/n1GUQVo1Lps?autoplay=1&controls=0&showinfo=0&autohide=1">
+  </iframe>
+</div>
         <div class="container">
-          <h2>Motivational Quotes</h2>
-          <button><a href='./main/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{dataArray}}'>Let's Go!</a></button>
+          <h2>Hi, {{name}}!</h2>
+          <button><a href='./main/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{dataArray}}'>Let's start your workout!</a></button>
         </div>
-    </body>
+</body>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/javascript/bootstrap.js"></script>
 </html>
