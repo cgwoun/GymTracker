@@ -60,8 +60,12 @@ exports.view = function(req, res){
             defaultActivityArray=categories[x].activities[y].data
             console.log("found data for the currentActivity");
             console.log(defaultActivityArray);
+            break;
           }
         }
+      }
+      if(defaultActivityArray==null){
+        defaultActivityArray=[]
       }
     }
 
