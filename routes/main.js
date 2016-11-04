@@ -69,8 +69,7 @@ exports.view = function(req, res){
   
 
   res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 
-  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,
-            'actName':actName});
+  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray});
 };
 
 
