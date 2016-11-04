@@ -8,6 +8,7 @@ var data =require("../userData.json");
 exports.view = function(req, res){
 
   var nameMenu = req.params.name;
+  var actName = req.params.activityName;
 
   var categories;
   for(var index in data.users){
@@ -68,7 +69,8 @@ exports.view = function(req, res){
   
 
   res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 
-  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray});
+  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,
+            'actName':actName});
 };
 
 
