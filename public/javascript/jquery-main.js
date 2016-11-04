@@ -1,4 +1,3 @@
-var data = require("../userData.json");
 var ctx;
 var currentActivity="";
 var daysArray = [1, 2, 3, 4];
