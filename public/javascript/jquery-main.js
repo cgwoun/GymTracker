@@ -1,5 +1,7 @@
+var data = require("../userData.json");
 var ctx;
 var currentActivity="";
+var daysArray = [1, 2, 3, 4];
 
 
 $(document).ready(function()
@@ -30,8 +32,15 @@ $(document).ready(function()
             }]
         }
     }
+
+
+
+
 });
+
 });
+
+
 
 Chart.defaults.global.responsive = true;
 
@@ -72,3 +81,4 @@ function parseToArray(htmlText)
 	for(var i=0; i<myArray.length; i++) { myArray[i] = +myArray[i]; } 
 	return myArray
 }
+
