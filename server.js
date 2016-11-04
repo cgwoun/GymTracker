@@ -13,6 +13,8 @@ var main = require('./routes/main');
 var login = require('./routes/login');
 var addUser = require('./routes/addUser');
 var addActivity = require('./routes/addActivity');
+var addData = require('./routes/addData');
+
 var activity = require('./routes/activity');
 var motivate = require('./routes/motivate');
 // Example route
@@ -48,7 +50,7 @@ app.get('/activity/:name', activity.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/activity/addActivity/:uname', addActivity.addActivities);
-
+app.get("/addData",addData.addValue);
 // Example route
 // app.get('/users', user.list);
 

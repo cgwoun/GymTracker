@@ -13,7 +13,6 @@ $(document).ready(function()
 	var parsedArray=parseToArray(array);
 	renderTable(parsedArray);
 	var labelArray=createLabelArray(parsedArray);
-	console.log(labelArray);
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
     type: 'line',
@@ -69,22 +68,22 @@ function addtoGraph(event)
 {
 	if(currentActivity=="")
 	 {
-	 	alert("This button will let you add to the graph for this activity!");
+	 	//alert("This button will let you add to the graph for this activity!");
 	 }
 	 else
 	 {
-	 	alert("This button will let you add to the graph for activity "+currentActivity);
+	 	//alert("This button will let you add to the graph for activity "+currentActivity);
 	 }
 }
 function renderTable(array){
 	var iter=1;
-	console.log("in renderTable "+array)
+	//console.log("in renderTable "+array)
 	for(element in array){
-		console.log("element is "+ array[element]);
+		//console.log("element is "+ array[element]);
 		var html="<tr><td>"+iter+"</td><td>"+array[element]+"</td></tr>";
-		console.log(html);
+		//console.log(html);
 		$("#tableBody").append (html);
-		console.log($("#tableBody"));
+		//console.log($("#tableBody"));
 		iter++;
 	}
 
@@ -100,7 +99,7 @@ function parseToArray(htmlText)
 function createLabelArray(array){
 	var iter=1;
 	var labelArray=[]
-	console.log("in renderTable "+array)
+	//console.log("in renderTable "+array)
 	for(element in array){
 		labelArray.push(("Day"+iter))
 		iter++;

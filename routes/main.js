@@ -35,7 +35,7 @@ exports.view = function(req, res){
     var defaultActivity;
     for(var x in categories){
       if(categories[x].activities.length !== 0){
-        defaultCategory = categories[x];
+        currentCategory = categories[x];
         defaultActivity = categories[x].activities[0];
         defaultActivityArray=categories[x].activities[0].data;
 
@@ -71,8 +71,8 @@ exports.view = function(req, res){
 
   }
   
-
-  res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 
+  console.log(categories)
+  res.render('main',{'categorie':categories, 'defaultCategory':currentCategory, 
   					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray});
 };
 
