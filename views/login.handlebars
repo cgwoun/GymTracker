@@ -1,12 +1,12 @@
   <!DOCTYPE html>
   <html>
-  	<link rel ="stylesheet" href="style-login.css" type = "text/css" />
+  	<link rel ="stylesheet" href="/css/style-login.css" type = "text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="./javascript/jquery-login.js"></script>
   <body>
-  <p> Gymtracker</p>
+  <h1> Gymtracker</h1>
   <div class="login">
-  <h2>Log In Form (can use default id="trung", password="trung")</h2>
+  <h2>Log In Form </h2>
 
   <form action="./motivate" method="get">
 
@@ -15,6 +15,7 @@
   <form action="./motivate" method="get">
 
       <label><b>Username</b></label>
+      <p>(can use default id="trung", password="trung")</p>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label><b>Password</b></label>
@@ -28,12 +29,13 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button id="cancelLogIn" type="button" class="cancelbtn">Cancel</button>
+      <button id="signup" type="button" class="signupbtn">SignUp</button>
+
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
 
   </form>
 
-      <button id="signup">SignUp</button>
 
   </div>
   <!-- This will handle the new users issue for now, can change later if we need to -->
