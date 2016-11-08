@@ -31,7 +31,7 @@ exports.addValue = function(req, res){
 
             if(data.users[i].categories[j].activities[k].activityName==actName){
   					 var temp = data.users[i].categories[j].activities[k].data;
-  					 temp.push(aNumber);
+  					 temp.push(parseInt(aNumber));
   					 console.log(temp);
   					 break;
             }
@@ -49,7 +49,7 @@ exports.addValue = function(req, res){
       categories=data.users[index].categories;
       //console.log("categories is")
       //console.log(categories)
-      break;
+      break; 
     }
   }
   // console.log(categories);

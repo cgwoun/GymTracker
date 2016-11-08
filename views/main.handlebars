@@ -117,8 +117,37 @@
 
 					  </span>
 					</div>
-					
-					</form>					
+					</form>
+
+					<form action="/editData/">
+
+					<div class="input-group">
+
+						<input name="myName" value="{{name}}" style="display:none;">
+						<input name="activity" value="{{defaultActivity}}" style="display:none;">
+						<input name="category" value="{{defaultCategory}}" style="display:none;">
+						<input name="categories" value="{{categorie}}" style="display:none;">
+
+
+					</div>
+					<div style="height: 170px; overflow: auto;">
+						
+										
+						<table >
+								<tr>
+							  	<th>
+							    <input name="day" type="text" class="form-control" placeholder="Day to Edit" required>
+							    </th>
+							    <th>
+						<input name="edit" type="text" class="form-control" placeholder="Change to?(-1 to Delete)" required>
+								</th>
+								<th>
+									<button style="font-family: 'Rubik', sans-serif;" id="graph-button" type="submit" class="btn btn-default">Edit Repetition</button>
+								</th>
+								</tr>
+						</table>
+						</div>
+					</form>	
 				</div>
 			</div>
 		</div>

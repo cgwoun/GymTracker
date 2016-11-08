@@ -6,7 +6,7 @@
 var data =require("../userData.json");
 
 exports.view = function(req, res){
-
+  console.log("Called main!")
   var nameMenu = req.params.name;
   var actName = req.params.activityName;
 

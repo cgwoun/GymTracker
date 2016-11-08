@@ -1,6 +1,5 @@
 var ctx;
 var currentActivity="";
-var daysArray = [1, 2, 3, 4];
 
 
 $(document).ready(function()
