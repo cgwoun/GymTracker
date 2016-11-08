@@ -15,7 +15,7 @@ exports.view = function(req, res){
   	//so this takes the 0 1 2 index and looks for an id
   	//console.log("user is "+ data.users[user].id);
   	var id=data.users[index].id
-  	if((id==nameMenu || id==nameMenu)&&id!=undefined){
+  	if((id==nameMenu)&&id!=undefined){
   		categories=data.users[index].categories;
   		//console.log("categories is")
   		//console.log(categories)
@@ -71,7 +71,7 @@ exports.view = function(req, res){
 
   }
   
-  console.log(categories)
+  // console.log(categories)
   res.render('main',{'categorie':categories, 'defaultCategory':currentCategory, 
   					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray});
 };

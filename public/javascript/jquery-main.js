@@ -110,24 +110,24 @@ function createLabelArray(array){
 	return labelArray
 }
 function addData(event){
-	var value = $("#numRep-Textfield").val();
-	console.log(value);
-	var pathArray = window.location.pathname.split( '/' );
+	// var value = $("#numRep-Textfield").val();
+	// console.log(value);
+	// var pathArray = window.location.pathname.split( '/' );
 	
 
-	var userName = pathArray[2];
-	var catName = pathArray[3];
-  //var catName = req.query.categ;
-   	pathArray[4].replace(/%20/g, " ");
+	// var userName = pathArray[2];
+	// var catName = pathArray[3];
+ //  //var catName = req.query.categ;
+ //   	pathArray[4].replace(/%20/g, " ");
 
-  	var actName = pathArray[4];
-	console.log(userName);
-	console.log(catName);
-	console.log(actName);
-  // console.log(userName);
-  // console.log(categ);
-  //console.log(newActivity);
-   var aNumber = value;
+ //  	var actName = pathArray[4];
+	// console.log(userName);
+	// console.log(catName);
+	// console.log(actName);
+ //  // console.log(userName);
+ //  // console.log(categ);
+ //  //console.log(newActivity);
+ //   var aNumber = value;
 
   //  	var data = require("../userData.json");
 

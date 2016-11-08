@@ -29,6 +29,6 @@ exports.view = function(req, res){
 
 
 
-  res.render('activity',{'defaultCategory':defaultCategory, 
-  					'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'uname':name});
+  res.render('activity',{'defaultCategory':defaultCategory,
+  					'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name});
 };

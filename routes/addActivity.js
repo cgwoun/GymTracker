@@ -6,10 +6,15 @@ exports.addActivities = function(req, res) {
   console.log("yay, addActivity just ran!");
 
   //var userName = req.query.name;
-  var userName = req.params.uname;
+  var userName = req.query.myName;
+  console.log(userName);
+
   var catName = req.query.categ;
-  //var catName = req.query.categ;
   var actName = req.query.actName;
+
+  var defaultArray = req.query.data;
+  var defaultCategory = req.query.category;
+  var defaultActivity = req.query.activity;
 
   var newActivity =
   {
@@ -17,6 +22,7 @@ exports.addActivities = function(req, res) {
       "dates" : [],
       "data": []
   }
+
   // console.log(userName);
   // console.log(categ);
   //console.log(newActivity);
@@ -33,5 +39,11 @@ exports.addActivities = function(req, res) {
       }
     }
   }
+  console.log('break');
 
+
+  // res.render('activity',{'defaultCategory':defaultCategory, 
+  //           'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name});
+  res.render('activity',{'defaultCategory':defaultCategory, 
+      'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray});
 }

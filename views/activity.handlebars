@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html>
   <link href="/css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 <body>
 
-<div style="margin-top: 70px;" class="container">
-  <a href="/main/{{uname}}/{{defaultCategory}}/{{defaultActivity}}/{{defaultArray}}"><img src="/img/back.PNG"></a>
+<div class="container">
+  <a href="/main/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{defaultArray}}"><img class="img-responsive" src="/img/back.PNG"></a>
 </div>
 
-<div class="container" style="margin-top: 80px;">
+<div class="container">
 
-<h1 class="jumbotron" style="text-align: center; font-size: 90px; font-family: 'Rubik', sans-serif;"">New Activity</h1>
+    <h1 class="jumbotron" style="text-align: center; font-family: 'Rubik', sans-serif;"">New Activity</h1>
 
-  <form action="addActivity/{{uname}}/">
-  <div class="container">
-    <label for="cat" style="font-size: 25px;"><b>Category:</b></label>
-    <select name="categ" class="selectpicker" data-width="100%" id="cat">
-      <option value="Chest">Chest</option>
-      <option value="Shoulders">Shoulders</option>
-      <option value="Triceps">Triceps</option>
-      <option value="Back">Back</option>
-      <option value="Biceps">Biceps</option>
-      <option value="Cardio">Cardio</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-  <br>
+  <!--   <form action="addActivity/{{uname}}/"> -->
+    <form action="/addActivity/">
+
+      <input name="myName" value="{{name}}" style="display:none;">
+      <input name="activity" value="{{defaultActivity}}" style="display:none;">
+      <input name="category" value="{{defaultCategory}}" style="display:none;">
+      <input name="data" value="{{defaultArray}}" style="display:none;">
+
+      <div class="container">
+        <label for="cat"><b>Category:</b></label>
+        <select name="categ" class="selectpicker" data-width="100%" id="cat">
+          <option value="Chest">Chest</option>
+          <option value="Shoulders">Shoulders</option>
+          <option value="Triceps">Triceps</option>
+          <option value="Back">Back</option>
+          <option value="Biceps">Biceps</option>
+          <option value="Cardio">Cardio</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <br>
 
       <div class="container form-group">
-        <label for="act" style="font-size: 25px;"><b>Activity:</b></label>
+        <label for="act"><b>Activity:</b></label>
         <input type="text" class="form-control" placeholder="Enter Activity Name" name="actName" id="act" required>
       </div>
-      <button type="submit" id="createdActivity" style="margin-left: 15px;" class="btn btn-success btn-lrg">Create New Activity</button>
-  </div>
 
-  </form>
+      <button type="submit" id="createdActivity" style="margin-left: 15px;" class="btn btn-success btn-lrg">Create New Activity</button>
+      
+    </form>
 
 </div>
 

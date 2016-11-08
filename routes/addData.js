@@ -8,11 +8,11 @@ exports.addValue = function(req, res){
   var aNumber = req.query.number;
   var categories=req.query.categories;
 
-  console.log("userName is "+userName);
-  console.log(actName);
-  console.log(catName);
-  console.log(aNumber);
-  console.log(categories);
+  // console.log("userName is "+userName);
+  // console.log(actName);
+  // console.log(catName);
+  // console.log(aNumber);
+  // console.log(categories);
   //var catName = req.query.categ;
 
   // console.log(userName);
@@ -26,8 +26,8 @@ exports.addValue = function(req, res){
   		for(j=0; j<data.users[i].categories.length; j++){
   			if(data.users[i].categories[j].categoryName === catName){
   				for(k =0; k<data.users[i].categories[j].activities.length; k++){
-            console.log("the thing is ");
-            console.log(data.users[i].categories[j].activities[k])
+            // console.log("the thing is ");
+            // console.log(data.users[i].categories[j].activities[k])
 
             if(data.users[i].categories[j].activities[k].activityName==actName){
   					 var temp = data.users[i].categories[j].activities[k].data;
@@ -52,7 +52,7 @@ exports.addValue = function(req, res){
       break;
     }
   }
-  console.log(categories);
+  // console.log(categories);
 
   res.render('main',{'categorie':categories, 'defaultCategory':catName, 
             'defaultActivity':actName, 'name':userName,'dataArray':temp});

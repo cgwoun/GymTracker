@@ -49,7 +49,7 @@ app.get('/motivate', motivate.view);
 app.get('/activity/:name', activity.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray', main.view);
 app.get('/addUser', addUser.addUsers);
-app.get('/activity/addActivity/:uname', addActivity.addActivities);
+app.get('/addActivity', addActivity.addActivities);
 app.get("/addData",addData.addValue);
 // Example route
 // app.get('/users', user.list);
