@@ -15,28 +15,48 @@ exports.deleteActivities = function(req, res) {
   var actName = req.params.defaultActivity;
   console.log(actName);
 
-  var defaultArray = req.query.data;
-  var defaultCategory = req.query.category;
-  var defaultActivity = req.query.activity;
-  var defaultLabelArray = req.query.dates;
+  var defaultArray;
+  var defaultCategory;
+  var defaultActivity;
+  var defaultLabelArray;
 
   // console.log(userName);
   // console.log(categ);
   //console.log(newActivity);
 
-  // for(i=0; i<data.users.length; i++){
-  //   if(data.users[i].id === userName){
-  //     for(j=0; j<data.users[i].categories.length; j++){
-  //       if(data.users[i].categories[j].categoryName === catName){
-  //         var temp = data.users[i].categories[j].activities;
-  //         temp.push(newActivity);
-  //         console.log(temp);
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
-  console.log('break');
+  var categories;
+  for(var index in data.users){
+    var id=data.users[index].id
+    if((id==userName)&&id!=undefined){
+      categories=data.users[index].categories;
+      break;
+    }
+  }
+
+  //Set default activity and default category to go back to main
+  var exitFlag;
+  for(var x in categories){
+    for(y in categories[x].activities){
+    console.log('test');
+    console.log(categories[x].activities[y].activityName);
+      if(categories[x].activities.length !== 0 && categories[x].activities[y].activityName != actName){
+        defaultCategory = categories[x].categoryName;
+        console.log(defaultCategory);
+        defaultActivity = categories[x].activities[x].activityName;
+        console.log(defaultActivity);
+        defaultArray=categories[x].activities[x].data;
+        console.log(defaultArray);
+        defaultLabelArray=categories[x].activities[x].dates;
+        console.log(defaultLabelArray);
+        exitFlag=true;
+        break;
+      }
+    }
+    if(exitFlag)
+    break;
+  }
+
+  console.log('break')
 
 
   // res.render('activity',{'defaultCategory':defaultCategory, 
