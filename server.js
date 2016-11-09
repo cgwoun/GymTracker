@@ -52,7 +52,7 @@ app.get('/activity/:name', activity.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/addActivity', addActivity.addActivities);
-app.get('/deleteActivity/:name/:defaultCategory/:defaultActivity', deleteActivity.deleteActivities);
+app.get('/deleteActivity', deleteActivity.deleteActivities);
 app.get("/addData",addData.addValue);
 app.get("/editData",editData.editValue);
 // Example route

@@ -150,19 +150,22 @@
 						</div>
 					</form>	
 
+					<form action="/deleteActivity/">
+						<div style="margin-top: 15px;">
+		<!-- 					<input name="myName" value="{{name}}" style="display:none;">
+							<input name="activity" value="{{defaultActivity}}" style="display:none;">
+							<input name="category" value="{{defaultCategory}}" style="display:none;">
+							<input name="categories" value="{{categorie}}" style="display:none;"> -->
 
-						<div class="input-group" style="margin-top: 15px;">
-
-<!-- 							<input name="myName" value="{{name}}" style="display:none;">
+							<input name="myName" value="{{name}}" style="display:none;">
 							<input name="activity" value="{{defaultActivity}}" style="display:none;">
 							<input name="category" value="{{defaultCategory}}" style="display:none;">
 							<input name="categories" value="{{categorie}}" style="display:none;">
- -->
 						  	<span>
-						    	<button style="font-family: 'Rubik', sans-serif;" type="button" class="btn btn-danger"><a href="/deleteActivity/{{name}}/{{defaultCategory}}/{{defaultActivity}}">Delete Activity</a></button>
+						    	<button style="font-family: 'Rubik', sans-serif;" onclick="return confirmDelete();" type="submit" class="btn btn-danger">Delete Activity</button>
 						  	</span>
 						</div>
-
+					</form>
 
 				</div>
 			</div>
@@ -174,6 +177,16 @@
 
 
 		<script src="/javascript/bootstrap.js"></script>
+		<script>
+		    function confirmDelete()
+		    {
+		      var x = confirm("Are you sure you want to delete?");
+		      if (x)
+		          return true;
+		      else
+		        return false;
+			}
+    	</script>
 </body>
 <footer id="contact">
 	<div class="wow zoomIn animated" data-wow-delay="0.2s center-block">

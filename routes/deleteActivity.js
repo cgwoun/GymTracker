@@ -6,23 +6,19 @@ exports.deleteActivities = function(req, res) {
   console.log("yay, deleteActivity just ran!");
 
   //var userName = req.query.name;
-  var userName = req.params.name;
-  console.log(userName);
+  var userName = req.query.myName;
+  //console.log(userName);
 
-  var catName = req.params.defaultCategory;
-  console.log(catName);
+  var catName = req.query.category;
+  //console.log(catName);
 
-  var actName = req.params.defaultActivity;
-  console.log(actName);
+  var actName = req.query.activity;
+  //console.log(actName);
 
   var defaultArray;
   var defaultCategory;
   var defaultActivity;
   var defaultLabelArray;
-
-  // console.log(userName);
-  // console.log(categ);
-  //console.log(newActivity);
 
   var categories;
   for(var index in data.users){
@@ -33,10 +29,32 @@ exports.deleteActivities = function(req, res) {
     }
   }
 
+  //Find and delete activity
+  var v;
+  var z;
+  var exit=false;
+  console.log("here1");
+  for(v in categories){
+    //console.log(categories[v].activities);
+    for(z=0; z<categories[v].activities.length; z++){
+      console.log(categories[v].activities[z]);
+      if(categories[v].activities[z].activityName === actName){
+        exit = true;
+        break;
+      }
+    }
+    if(exit){
+      break;
+    }
+  }
+  console.log("here");
+  categories[v].activities.splice(z, 1);
+
+
   //Set default activity and default category to go back to main
-  var exitFlag;
+  var exitFlag=false;
   for(var x in categories){
-    for(y in categories[x].activities){
+    for(var y in categories[x].activities){
     console.log('test');
     console.log(categories[x].activities[y].activityName);
       if(categories[x].categoryName != catName && categories[x].activities.length !== 0 && categories[x].activities[y].activityName != actName){
@@ -58,7 +76,6 @@ exports.deleteActivities = function(req, res) {
 
   console.log('break')
 
-
-  res.render('deleteActivity',{'defaultCategory':defaultCategory, 'currentCategory':catName, 'currentActivity':actName,
-      'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray,'labelArray':defaultLabelArray});
+  res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 'currentCategory':catName, 'currentActivity':actName,
+      'defaultActivity':defaultActivity, 'name':userName, 'dataArray':defaultArray,'labelArray':defaultLabelArray});
 }
