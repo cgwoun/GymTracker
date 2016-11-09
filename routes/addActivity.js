@@ -15,7 +15,7 @@ exports.addActivities = function(req, res) {
   var defaultArray = req.query.data;
   var defaultCategory = req.query.category;
   var defaultActivity = req.query.activity;
-
+  var defaultLabelArray = req.query.dates;
   var newActivity =
   {
       "activityName": actName,
@@ -45,5 +45,5 @@ exports.addActivities = function(req, res) {
   // res.render('activity',{'defaultCategory':defaultCategory, 
   //           'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name});
   res.render('activity',{'defaultCategory':defaultCategory, 
-      'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray});
+      'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray,'labelArray':defaultLabelArray});
 }

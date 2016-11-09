@@ -35,8 +35,15 @@ exports.editValue = function(req, res){
             if(data.users[i].categories[j].activities[k].activityName==actName){
              console.log("In the if");
              var temp = data.users[i].categories[j].activities[k];
-             newData=editDay(day,edit,temp);
-             console.log(temp);
+             var dates = data.users[i].categories[j].activities[k].dates;
+             if(!(day<1||day>dates.length)){
+                newData=editDay(day,edit,temp);
+                //dates=data.users[i].categories[j].activities[k].dates;
+             }
+             else{
+              console.log("Value of out range!")
+              newData=temp.data;
+             }
              editComplete=true;
             // console.log("ret was "+ret);
              break;
@@ -57,7 +64,7 @@ exports.editValue = function(req, res){
   }
   console.log("categories is ");
   console.log(categories);
-  
+
   for(var index in data.users){
     //so this takes the 0 1 2 index and looks for an id
     //console.log("user is "+ data.users[user].id);
@@ -71,8 +78,10 @@ exports.editValue = function(req, res){
   }
  
   console.log("About to call render main!");
+  console.log("newData is "+newData);
+  console.log("labelArray is "+dates);
   res.render('main',{'categorie':categories, 'defaultCategory':catName, 
-            'defaultActivity':actName, 'name':userName,'dataArray':newData});
+            'defaultActivity':actName, 'name':userName,'dataArray':newData,'labelArray':dates});
 }
 
 function editDay(day,edit,activity){
@@ -86,6 +95,7 @@ function editDay(day,edit,activity){
         console.log("array was ");
         console.log(activity.data);
         var removed=activity.data.splice(i,1);
+        activity.dates.splice(i,1);
         console.log("Just removed "+removed);
         return activity.data;
       }
@@ -93,6 +103,7 @@ function editDay(day,edit,activity){
         console.log("array was ");
         console.log(activity.data);
         var editted=activity.data.splice(i,1,parseInt(edit));
+
         console.log("Editted to "+edit +"array is now");
         console.log(activity.data);
         return activity.data;

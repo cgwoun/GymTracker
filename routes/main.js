@@ -27,6 +27,7 @@ exports.view = function(req, res){
   var currentActivity=req.params.defaultActivity
   var currentCategory=req.params.defaultCategory
   var defaultActivityArray=req.params.defaultActivityArray
+  var defaultLabelArray=req.params.defaultLabelArray
   console.log("current activity is" +currentActivity);
   if(currentActivity ==null){
 
@@ -57,6 +58,7 @@ exports.view = function(req, res){
         for(var y in categories[x].activities){
         //  console.log(categories[x].activities[y]);
           if(categories[x].activities[y].activityName==currentActivity){
+            defaultLabelArray=categories[x].activities[y].dates;
             defaultActivityArray=categories[x].activities[y].data
             console.log("found data for the currentActivity");
             console.log(defaultActivityArray);
@@ -67,13 +69,16 @@ exports.view = function(req, res){
       if(defaultActivityArray==null){
         defaultActivityArray=[]
       }
+      if(defaultLabelArray==null){
+        defaultActivityArray=[]
+      }
     }
 
   }
   
   // console.log(categories)
   res.render('main',{'categorie':categories, 'defaultCategory':currentCategory, 
-  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray});
+  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray});
 };
 
 

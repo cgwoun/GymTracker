@@ -23,6 +23,7 @@ exports.view = function(req, res){
   		defaultCategory = categories[x].categoryName;
   		defaultActivity = categories[x].activities[0].activityName;
       defaultArray = categories[x].activities[0].data;
+      defaultLabelArray=categories[x].activities[0].dates;
   		break;
   	}
   }
@@ -30,5 +31,5 @@ exports.view = function(req, res){
 
 
   res.render('activity',{'defaultCategory':defaultCategory,
-  					'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name});
+  					'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name,'labelArray':defaultLabelArray});
 };

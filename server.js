@@ -49,7 +49,7 @@ app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/motivate', motivate.view);
 app.get('/activity/:name', activity.view);
-app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray', main.view);
+app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/addActivity', addActivity.addActivities);
 app.get("/addData",addData.addValue);

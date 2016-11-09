@@ -11,9 +11,11 @@ $(document).ready(function()
 	$("#addData-button").click(addData);
 
 	var array=$("#array").text();
+	var dateArray=$("#labelArray").text();
 	var parsedArray=parseToArray(array);
-	renderTable(parsedArray);
-	var labelArray=createLabelArray(parsedArray);
+	var labelArray=createLabelArray(dateArray);
+	renderTable(parsedArray,labelArray);
+
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
     type: 'line',
@@ -77,12 +79,13 @@ function changedActivity(event)
 	// 	 	alert("This button will let you add to the graph for activity "+currentActivity);
 	// 	 }
 	// }
-function renderTable(array){
+function renderTable(array,labelArray){
 	var iter=1;
 	//console.log("in renderTable "+array)
 	for(element in array){
 		//console.log("element is "+ array[element]);
-		var html="<tr><td>"+iter+"</td><td>"+array[element]+"</td></tr>";
+		label=labelArray[element].slice(-1);
+		var html="<tr><td>"+label+"</td><td>"+array[element]+"</td></tr>";
 		//console.log(html);
 		$("#tableBody").append (html);
 		//console.log($("#tableBody"));
@@ -101,11 +104,13 @@ function parseToArray(htmlText)
 function createLabelArray(array){
 	var iter=1;
 	var labelArray=[]
+	var myArray=array.split(",");
 	//console.log("in renderTable "+array)
-	for(element in array){
-		labelArray.push(("Day"+iter))
+	for(element in myArray){
+		labelArray.push(("Day"+myArray[element]))
 		iter++;
 	}
+	console.log("Label array was "+labelArray);
 	return labelArray
 }
 function addData(event){
