@@ -39,14 +39,14 @@ exports.deleteActivities = function(req, res) {
     for(y in categories[x].activities){
     console.log('test');
     console.log(categories[x].activities[y].activityName);
-      if(categories[x].activities.length !== 0 && categories[x].activities[y].activityName != actName){
+      if(categories[x].categoryName != catName && categories[x].activities.length !== 0 && categories[x].activities[y].activityName != actName){
         defaultCategory = categories[x].categoryName;
         console.log(defaultCategory);
-        defaultActivity = categories[x].activities[x].activityName;
+        defaultActivity = categories[x].activities[y].activityName;
         console.log(defaultActivity);
-        defaultArray=categories[x].activities[x].data;
+        defaultArray=categories[x].activities[y].data;
         console.log(defaultArray);
-        defaultLabelArray=categories[x].activities[x].dates;
+        defaultLabelArray=categories[x].activities[y].dates;
         console.log(defaultLabelArray);
         exitFlag=true;
         break;
@@ -59,8 +59,6 @@ exports.deleteActivities = function(req, res) {
   console.log('break')
 
 
-  // res.render('activity',{'defaultCategory':defaultCategory, 
-  //           'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name});
   res.render('deleteActivity',{'defaultCategory':defaultCategory, 'currentCategory':catName, 'currentActivity':actName,
       'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray,'labelArray':defaultLabelArray});
 }
