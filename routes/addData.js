@@ -31,7 +31,11 @@ exports.addValue = function(req, res){
 
             if(data.users[i].categories[j].activities[k].activityName==actName){
   					 var temp = data.users[i].categories[j].activities[k].data;
-  					 temp.push(aNumber);
+  					 temp.push(parseInt(aNumber));
+
+             var date= data.users[i].categories[j].activities[k].dates;
+             var dateLength=date.length;
+             date.push(dateLength);
   					 console.log(temp);
   					 break;
             }
@@ -49,13 +53,13 @@ exports.addValue = function(req, res){
       categories=data.users[index].categories;
       //console.log("categories is")
       //console.log(categories)
-      break;
+      break; 
     }
   }
   // console.log(categories);
 
   res.render('main',{'categorie':categories, 'defaultCategory':catName, 
-            'defaultActivity':actName, 'name':userName,'dataArray':temp});
+            'defaultActivity':actName, 'name':userName,'dataArray':temp,'labelArray':date});
 
   //Why is this line here?
   //data.users.push(newUser);

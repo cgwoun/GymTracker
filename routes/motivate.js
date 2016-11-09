@@ -29,12 +29,13 @@ exports.view = function(req, res){
   //Gets the default main page exercise and activity
   var defaultCategory;
   var defaultActivity;
+  var defaultLabelArray;
   for(var x in categories){
   	if(categories[x].activities.length !== 0){
   		defaultCategory = categories[x].categoryName;
   		defaultActivity = categories[x].activities[0].activityName;
       defaultActivityArray=categories[x].activities[0].data;
-
+      defaultLabelArray=categories[x].activities[0].dates;
   		break;
   	}
   }
@@ -45,5 +46,5 @@ exports.view = function(req, res){
   // var query = JSON.stringify(req.query);
 
   res.render('motivate',{'categorie':categories, 'defaultCategory':defaultCategory, 
-  					'defaultActivity':defaultActivity, 'name':nameToShow,'dataArray':defaultActivityArray});
+  					'defaultActivity':defaultActivity, 'name':nameToShow,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray});
 };

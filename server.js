@@ -14,6 +14,8 @@ var login = require('./routes/login');
 var addUser = require('./routes/addUser');
 var addActivity = require('./routes/addActivity');
 var addData = require('./routes/addData');
+var editData = require('./routes/editData');
+
 
 var activity = require('./routes/activity');
 var motivate = require('./routes/motivate');
@@ -47,10 +49,11 @@ app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/motivate', motivate.view);
 app.get('/activity/:name', activity.view);
-app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray', main.view);
+app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/addActivity', addActivity.addActivities);
 app.get("/addData",addData.addValue);
+app.get("/editData",editData.editValue);
 // Example route
 // app.get('/users', user.list);
 
