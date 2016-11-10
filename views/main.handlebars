@@ -7,11 +7,11 @@
 	<meta name = "viewport" content ="width=device-width, initial-scale=1.0">
 <!-- 	<link rel="stylesheet" href="/javascript/blueberry.css" /> -->
 
-	<link rel ="stylesheet" href="style.css" type="text/css">
 <!-- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
     <link rel ="stylesheet" href="/css/style-footer.css" type = "text/css" />
+    <link rel ="stylesheet" href="/css/style-main.css" type = "text/css" />
 
 <!-- 	<link rel="stylesheet" href="/javascript/animate.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
@@ -30,10 +30,21 @@
 	<script type="text/javascript" src="/javascript/jquery-main.js"></script>
 	
 </script>
+	
 </head>
+<header>
+		<nav id="navy">
+			<a href="#" id="disabledLogo">Gymtracker</a>
+			<div class="info">
+			<a id='helpBtn' style="font-family: 'Rubik', sans-serif;" href="/help/">Help</a>
+            <!-- <a id='logoutBtn' href="/">Log Out</a> -->
+			<button style="font-family: 'Rubik', sans-serif;" onclick="return logout();"  class="btn btn-danger">Logout</button>
 
+			</div>
+		</nav>
+	</header>
 <body>
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -42,8 +53,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand disabled" href="#">GymTracker</a>        
-        </div>
+<!--             <a class="navbar-brand disabled" href="#">GymTracker</a>        
+ -->        </div>
         <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
                 <li class="dropdown">
@@ -60,8 +71,8 @@
 	                  	</ul>
                 	</li>
                 	{{/each}}
-                	<li><a href="/help/">Help</a></li>
-                	<li><a href="/">Log Out</a></li>
+                	<!-- <li><a href="/help/">Help</a></li>
+                	<li><a href="/">Log Out</a></li> -->
                 </li>
            </ul>
         </div>
@@ -157,16 +168,7 @@
 		<a id="labelArray" style="display:none;">{{labelArray}}</a>
 
 		<script src="/javascript/bootstrap.js"></script>
-		<script>
-		    function confirmDelete()
-		    {
-		      var x = confirm("Are you sure you want to delete?");
-		      if (x)
-		          return true;
-		      else
-		        return false;
-			}
-    	</script>
+		
 </body>
 <footer id="contact">
 	<div class="wow zoomIn animated" data-wow-delay="0.2s center-block">
