@@ -1,5 +1,3 @@
-var data = require("../userData.json");
-
 /*
  * GET main page.
  */

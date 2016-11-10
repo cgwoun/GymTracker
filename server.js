@@ -12,11 +12,13 @@ var index = require('./routes/index');
 var main = require('./routes/main');
 var login = require('./routes/login');
 var addUser = require('./routes/addUser');
+
 var addActivity = require('./routes/addActivity');
 var addData = require('./routes/addData');
 var editData = require('./routes/editData');
 var deleteActivity = require('./routes/deleteActivity');
 var help = require('./routes/help')
+var validation = require('./routes/validation');
 
 var activity = require('./routes/activity');
 var motivate = require('./routes/motivate');
@@ -50,6 +52,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/motivate', motivate.view);
+app.get('/validation', validation.validate);
 app.get('/activity/:name', activity.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 app.get('/addUser', addUser.addUsers);

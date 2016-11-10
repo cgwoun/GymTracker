@@ -22,4 +22,5 @@ $(document).ready(function(){
  	$("#cancelLogIn").click(function(){
  		window.history.back();
  	});
+    
 });

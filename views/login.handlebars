@@ -9,20 +9,19 @@
   <div class="login">
   <h2>Log In Form </h2>
 
-  <form action="./motivate" method="get">
-
-
     <div class="container">
-  <form action="./motivate" method="get">
+  <form action="./validation" method="get">
 
       <label><b>Username</b></label>
       <p>(can use default id="trung", password="trung")</p>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <h3 id ="wrong">{{status}}</h3>
+
+      <input id = 'username' type="text" placeholder="Enter Username" name="uname" required>
 
       <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input id = 'password' type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit">Login</button>
+      <button type="submit" id='login'>Login</button>
 
       <input type="checkbox" checked="checked"> Remember me
     </div>
