@@ -7,28 +7,21 @@ exports.view = function(req, res){
   // console.log('nameMenu: ' + nameMenu);
   // console.log('nameToShow: ' + nameToShow);
 
-  //console.log(data.users)
-  //user is an iterator, 0 1 2 etc...
+
   var categories;
   for(var index in data.users){
-  	//so this takes the 0 1 2 index and looks for an id
-  	//console.log("user is "+ data.users[user].id);
   	var id=data.users[index].id
   	if((id==nameToShow)&&id!=undefined){
   		categories=data.users[index].categories;
-  		//console.log("categories is")
-  		//console.log(categories)
   		break;
   	}
   }
 
-  //console.log(categories);
-  // console.log(categories);
-  // console.log('break');
   
   //Gets the default main page exercise and activity
   var defaultCategory;
   var defaultActivity;
+  var defaultActivityArray;
   var defaultLabelArray;
   for(var x in categories){
   	if(categories[x].activities.length !== 0){

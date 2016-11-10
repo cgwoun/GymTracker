@@ -5,6 +5,27 @@
 			"password": "trung",
 			"categories": [
 				{
+					"categoryName": "Abs",
+					"activities": [
+						{
+							"activityName": "Sit ups",
+							"dates" : [1, 2, 3, 4,5,6],
+							"data": [2, 0, 5, 0, 7, 14]
+						},
+						{
+							"activityName": "Planks",
+							"dates" : [1, 2, 3, 4,5,6],
+							"data": [2, 3, 5, 10, 7, 1]
+						},
+						{
+							"activityName": "V Holds",
+							"dates" : [1, 2, 3, 4,5,6],
+							"data": [2, 10, 5, 7, 2, 2]
+						}
+					]
+
+				},				
+				{
 					"categoryName": "Chest",
 					"activities": [
 						{
@@ -134,6 +155,17 @@
 			"id": "allan",
 			"password": "lol",
 			"categories": [
+				{
+					"categoryName": "Abs",
+					"activities": [
+						{
+							"activityName": "V Holds",
+							"dates" : [1, 2, 3, 4,5,6],
+							"data": [2, 10, 5, 7, 2, 2]
+						}
+					]
+
+				},				
 				{
 					"categoryName": "Chest",
 					"activities": [

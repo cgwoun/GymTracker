@@ -71,7 +71,7 @@ exports.deleteActivities = function(req, res) {
       }
     }
     if(exitFlag)
-    break;
+      break;
   }
 
   console.log('break')

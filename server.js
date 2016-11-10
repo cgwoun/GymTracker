@@ -16,9 +16,11 @@ var addActivity = require('./routes/addActivity');
 var addData = require('./routes/addData');
 var editData = require('./routes/editData');
 var deleteActivity = require('./routes/deleteActivity');
+var help = require('./routes/help')
 
 var activity = require('./routes/activity');
 var motivate = require('./routes/motivate');
+
 // Example route
 // var user = require('./routes/user');
 var data = require('./userData.json');
@@ -54,6 +56,7 @@ app.get('/addUser', addUser.addUsers);
 app.get('/addActivity', addActivity.addActivities);
 app.get('/deleteActivity', deleteActivity.deleteActivities);
 app.get("/addData",addData.addValue);
+app.get("/help", help.view);
 app.get("/editData",editData.editValue);
 // Example route
 // app.get('/users', user.list);

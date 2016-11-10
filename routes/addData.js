@@ -8,17 +8,6 @@ exports.addValue = function(req, res){
   var aNumber = req.query.number;
   var categories=req.query.categories;
 
-  // console.log("userName is "+userName);
-  // console.log(actName);
-  // console.log(catName);
-  // console.log(aNumber);
-  // console.log(categories);
-  //var catName = req.query.categ;
-
-  // console.log(userName);
-  // console.log(categ);
-  //console.log(newActivity);
-  // var aNumber = 3;
 
    
   for(i=0; i<data.users.length; i++){
