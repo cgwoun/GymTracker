@@ -3,12 +3,13 @@ var currentActivity="";
 
 
 $(document).ready(function()
-{
+{	
 	$("#addCategory").click(addACategory);
 	$(".addActivity").click(addAnActivity);
 	$(".activity").click(changedActivity);
 	// $("#graph-button").click(addtoGraph);
 	$("#addData-button").click(addData);
+	$("#burgerBar").click(openNav);
 
 	var array=$("#array").text();
 	var dateArray=$("#labelArray").text();
@@ -48,7 +49,18 @@ $(document).ready(function()
 
 Chart.defaults.global.responsive = true;
 
+/* Set the width of the side navigation to 250px */
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
 function addACategory(event)
 {
 		alert("This will let you add an category!");

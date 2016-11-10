@@ -1,4 +1,4 @@
-var data = require("../userData.json");
+var data =require("../userData.json");
 
 exports.validate = function(req, res){
 	console.log("Check user!");
@@ -13,15 +13,17 @@ exports.validate = function(req, res){
   		if (data.users[i].password === pass){
   			console.log('GOTCHA');
 
-        var categories;
-        for(var index in data.users){
-          var id=data.users[index].id
-          if((id==userName)&&id!=undefined){
-            categories=data.users[index].categories;
-            break;
-          }
-        }
+        var categories =  data.users[i].categories;
+        console.log(categories);
 
+        // for(j=0;j<data.users.length; j++){
+        //   var id=data.users[j].id;
+        //   console.log(id);
+
+        //   if((id==userName)&&id!=undefined){
+           // break;
+       //   }
+        //}
 
         //Gets the default main page exercise and activity
         var defaultCategory;
@@ -37,19 +39,13 @@ exports.validate = function(req, res){
             break;
           }
         }
-
-  // console.log(defaultActivity);
-  // console.log(defaultCategory);
-
-  // var query = JSON.stringify(req.query);
-
-      res.render('motivate',{'categorie':categories, 'defaultCategory':defaultCategory, 
-        'defaultActivity':defaultActivity, 'name':userName,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray});  		}
-  else{
-    falsePass = true;
-    }
+       res.render('motivate',{'categorie':categories, 'defaultCategory':defaultCategory, 
+        'defaultActivity':defaultActivity, 'name':userName,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray});  		
+        return;
+      }
     }
   }
+  console.log("END");
   var status1 = 'Wrong password, re-enter it';
   var status2 = 'Username does not exist, check for typos.';
 

@@ -11,4 +11,6 @@ footer{
 footer p a{
 	text-decoration: none;
 }
-
+.navbar-collapse.nav.dropdown.activity{
+	background-color: black;
+}
