@@ -19,7 +19,7 @@ $(document).ready(function()
 
 	ctx = document.getElementById("myChart");
 	var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     responsive: true,
     data: {
         labels: labelArray,
