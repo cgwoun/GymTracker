@@ -25,7 +25,10 @@ $(document).ready(function()
         labels: labelArray,
         datasets: [{
             label: 'Progression',
-            data: parsedArray
+            data: parsedArray,
+            backgroundColor:"rgba(75,192,192,0.75)",
+            pointHoverBackgroundColor:"Red",
+            spanGaps: true
         }]
     },
     options: {
