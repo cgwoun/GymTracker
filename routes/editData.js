@@ -90,6 +90,7 @@ function editDay(day,edit,activity){
   console.log("day is "+ day+ " edit is "+ edit + " activity is "+activity);
   for(i in dates){
     if(dates[i]==day){
+      /*
       if(edit==-1){
        
         console.log("array was ");
@@ -100,6 +101,7 @@ function editDay(day,edit,activity){
         return activity.data;
       }
       else{
+        */
         console.log("array was ");
         console.log(activity.data);
         var editted=activity.data.splice(i,1,parseInt(edit));
@@ -107,7 +109,7 @@ function editDay(day,edit,activity){
         console.log("Editted to "+edit +"array is now");
         console.log(activity.data);
         return activity.data;
-      }
+      //}
     }
   }
 

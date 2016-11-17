@@ -89,6 +89,15 @@ function confirmDelete()
   else
     return false;
 }
+
+function confirmEdit()
+{
+  var x = confirm("Are you sure you want to edit this day?");
+  if (x)
+      return true;
+  else
+    return false;
+}
 function logout()
 {
   window.location.href = "/";
@@ -110,7 +119,7 @@ function renderTable(array,labelArray){
 	for(element in array){
 		//console.log("element is "+ array[element]);
 		label=labelArray[element].slice(-1);
-		var html="<tr><td>"+label+"</td><td>"+array[element]+"</td></tr>";
+		var html="<tr><td style='cursor:pointer;' onclick='setDate("+label+")'>"+label+"</td><td>"+array[element]+"</td></tr>";
 		//console.log(html);
 		$("#tableBody").append (html);
 		//console.log($("#tableBody"));
@@ -118,7 +127,13 @@ function renderTable(array,labelArray){
 	}
 
 }
-
+function setDate(label){
+    var whoCalledMe=$(this);
+    console.log(whoCalledMe);
+    console.log("whoCalled me text"+whoCalledMe);
+    console.log($("#editDay"));
+    $("#editDay").val(label);
+}
 function parseToArray(htmlText)
 {
 	var myArray=htmlText.split(",");

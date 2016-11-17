@@ -138,13 +138,13 @@
 							<table >
 									<tr>
 								  	<th>
-								    	<input name="day" type="text" class="form-control" placeholder="Day to Edit" required>
+								    	<input id="editDay" name="day" type="text" class="form-control" placeholder="Day to Edit" required>
 								    </th>
 								    <th>
-										<input name="edit" type="text" class="form-control" placeholder="Change to?(-1 to Delete)" required>
+										<input name="edit" type="text" class="form-control" placeholder="Change to?" required>
 									</th>
 									<th>
-										<button style="font-family: 'Rubik', sans-serif;" id="graph-button" type="submit" class="btn btn-danger">Edit Repetition</button>
+										<button onclick="return confirmEdit();" style="font-family: 'Rubik', sans-serif;" id="graph-button" type="submit" class="btn btn-danger">Edit Repetition</button>
 									</th>
 									</tr>
 							</table>
