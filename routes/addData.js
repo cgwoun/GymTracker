@@ -24,6 +24,7 @@ exports.addValue = function(req, res){
 
              var date= data.users[i].categories[j].activities[k].dates;
              var dateLength=date.length;
+             dateLength++;
              date.push(dateLength);
   					 console.log(temp);
   					 break;

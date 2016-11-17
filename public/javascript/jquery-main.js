@@ -81,8 +81,18 @@ function changedActivity(event)
 	 $("#main .text").text(whoCalledMe); 
 	 currentActivity=whoCalledMe;
 }
-
-
+function confirmDelete()
+{
+  var x = confirm("Are you sure you want to delete?");
+  if (x)
+      return true;
+  else
+    return false;
+}
+function logout()
+{
+  window.location.href = "/";
+}
 	// function addtoGraph(event)
 	// {
 	// 	if(currentActivity=="")
