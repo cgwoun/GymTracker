@@ -115,11 +115,26 @@ function logout()
 	// }
 function renderTable(array,labelArray){
 	var iter=1;
-	//console.log("in renderTable "+array)
-	for(element in array){
-		//console.log("element is "+ array[element]);
-		label=labelArray[element].slice(-1);
-		var html="<tr><td style='cursor:pointer;' onclick='setDate("+label+")'>"+label+"</td><td>"+array[element]+"</td></tr>";
+	console.log("in renderTable "+array)
+
+	for(element=0; element < array.length; element++){
+
+		console.log("label is "+ labelArray[element]);
+		console.log("element is "+ array[element]);
+		label=String(labelArray[element])
+		console.log("Label is "+label);
+		console.log("Type is  " +typeof(label));
+		//var html="<tr><td style='cursor:pointer;' onclick='setDate("+String(label)+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
+		var html="<tr><td style='cursor:pointer;' onclick='setDate("+'"'+labelArray[element]+'"'+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
+
+		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
+
+
+	// for(element in array){
+	// 	//console.log("element is "+ array[element]);
+	// 	label=labelArray[element].slice(-1);
+	// 	var html="<tr><td style='cursor:pointer;' onclick='setDate("+label+")'>"+label+"</td><td>"+array[element]+"</td></tr>";
+
 		//console.log(html);
 		$("#tableBody").append (html);
 		//console.log($("#tableBody"));
@@ -129,9 +144,10 @@ function renderTable(array,labelArray){
 }
 function setDate(label){
     var whoCalledMe=$(this);
-    console.log(whoCalledMe);
-    console.log("whoCalled me text"+whoCalledMe);
-    console.log($("#editDay"));
+ //   console.log(whoCalledMe);
+ 	text=whoCalledMe.text();
+    console.log("whoCalled me text"+ text);
+  //  console.log($("#editDay"));
     $("#editDay").val(label);
 }
 function parseToArray(htmlText)
@@ -144,10 +160,12 @@ function parseToArray(htmlText)
 function createLabelArray(array){
 	var iter=1;
 	var labelArray=[]
+	var myArray	= array;
 	var myArray=array.split(",");
 	//console.log("in renderTable "+array)
-	for(element in myArray){
-		labelArray.push(("Day"+myArray[element]))
+	for(element = 0; element<myArray.length; element++){
+		labelArray.push(myArray[element]);
+		//console.log(myArray[element]);
 		iter++;
 	}
 	console.log("Label array was "+labelArray);
