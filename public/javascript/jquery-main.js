@@ -25,7 +25,10 @@ $(document).ready(function()
         labels: labelArray,
         datasets: [{
             label: 'Progression',
-            data: parsedArray
+            data: parsedArray,
+            backgroundColor:"rgba(75,192,192,0.75)",
+            pointHoverBackgroundColor:"Red",
+            spanGaps: true
         }]
     },
     options: {
@@ -86,6 +89,15 @@ function confirmDelete()
   else
     return false;
 }
+
+function confirmEdit()
+{
+  var x = confirm("Are you sure you want to edit this day?");
+  if (x)
+      return true;
+  else
+    return false;
+}
 function logout()
 {
   window.location.href = "/";
@@ -104,17 +116,17 @@ function logout()
 function renderTable(array,labelArray){
 	var iter=1;
 	//console.log("in renderTable "+array)
+<<<<<<< HEAD
 	for(element=0; element < array.length; element++){
 
 		console.log("label is "+ labelArray[element]);
 		console.log("element is "+ array[element]);
 		//label=labelArray[element].slice(-1);
 
-		var html="<tr><td>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
+		var html="<tr><td style='cursor:pointer;' onclick='setDate("+label+")'>"+label+"</td><td>"+array[element]+"</td></tr>";
 
 
 		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
-
 		//console.log(html);
 		$("#tableBody").append (html);
 		//console.log($("#tableBody"));
@@ -122,7 +134,13 @@ function renderTable(array,labelArray){
 	}
 
 }
-
+function setDate(label){
+    var whoCalledMe=$(this);
+    console.log(whoCalledMe);
+    console.log("whoCalled me text"+whoCalledMe);
+    console.log($("#editDay"));
+    $("#editDay").val(label);
+}
 function parseToArray(htmlText)
 {
 	var myArray=htmlText.split(",");

@@ -10,6 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var main = require('./routes/main');
+var main2 = require('./routes/main2');
+
 var login = require('./routes/login');
 var addUser = require('./routes/addUser');
 
@@ -55,6 +57,7 @@ app.get('/motivate', motivate.view);
 app.get('/validation', validation.validate);
 app.get('/activity/:name', activity.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
+app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main2.view);
 app.get('/addUser', addUser.addUsers);
 app.get('/addActivity', addActivity.addActivities);
 app.get('/deleteActivity', deleteActivity.deleteActivities);
