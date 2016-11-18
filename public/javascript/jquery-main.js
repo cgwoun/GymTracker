@@ -123,7 +123,7 @@ function renderTable(array,labelArray){
 		console.log("element is "+ array[element]);
 		//label=labelArray[element].slice(-1);
 
-		var html="<tr><td>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
+		var html="<tr><td style='cursor:pointer;' onclick='setDate('+label+')'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
 
 
 		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
