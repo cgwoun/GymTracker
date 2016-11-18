@@ -7,12 +7,13 @@ h1{
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    text-align: left;
 }
 
 button {
@@ -25,16 +26,14 @@ button {
     width: 40%;
 }
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
+.btn{
+    width:  40%;
+    padding: 10px;
 }
-.signupbtn{
-    width: auto;
-    padding: 10px 18px;
-    background-color: #4CAF50;
+.container{
+    text-align: center;
 }
+
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
