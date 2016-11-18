@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel ="stylesheet" href="/css/style.css" type = "text/css" />
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <script type="text/javascript" src="./javascript/jquery-login.js"></script>
   <body>
@@ -17,24 +18,24 @@
 
     <div class="container">
   <form action="./validation" method="get">
+      <h3 id ="wrong">{{status}}</h3>
+      <h5>(can use default id="trung", password="trung")</h5>
 
       <label><b>Username</b></label>
-      <p>(can use default id="trung", password="trung")</p>
-      <h3 id ="wrong">{{status}}</h3>
-
+     
       <input type="text" placeholder="Enter Username" name="uname" required>
-
+      <br>
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
+      <br>
+      <button class="btn btn-success" type="submit">Login</button>
 
     </div>
 
 
     <div class="container" style="background-color:#f1f1f1">
-      <button id="cancelLogIn" type="button" class="cancelbtn">Cancel</button>
-      <button id="signup" type="button" class="signupbtn">SignUp</button>
+      <button id="cancelLogIn" type="button" class="btn btn-danger">Cancel</button>
+      <button id="signup" type="button" class="btn btn-success">SignUp</button>
 
     </div>
 
@@ -53,17 +54,19 @@
       <div class="createAccount">
       <label><b>Choose a user name:</b></label>
       <input type="text" placeholder="Enter Username" name="name" required>
-
+      <br>
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pass" required>
+      <br>
+      <label><b>Re-enter password</b></label>
       <input type="password" placeholder="Re-Enter Password" required>
-
-      <button id="submitSignup" type="submit">Sign up</button>
+      <br>
+      <button class ="btn btn-success" id="submitSignup" type="submit">Sign up</button>
     </div>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button id="login" type="button" class="cancelbtn">Cancel</button>
+    <div class="container" >
+      <button id="login" type="button" class="btn btn-danger">Cancel</button>
     </div>
   </form>
   </div>
