@@ -2,6 +2,7 @@ var data = require("../userData.json");
 
 exports.addValue = function(req, res){
 	console.log("adding new data!");
+  var main = req.query.main;
 	var userName = req.query.myName;
 	var actName = req.query.activity;
   var catName = req.query.category;
@@ -52,12 +53,19 @@ exports.addValue = function(req, res){
     }
   }
   // console.log(categories);
-
-  res.render('main',{'categorie':categories, 'defaultCategory':catName, 
+  if(main === 'main'){
+      res.render('main',{'categorie':categories, 'defaultCategory':catName, 
             'defaultActivity':actName, 'name':userName,'dataArray':temp,'labelArray':date});
+  }
+  else{
+      res.render('main2',{'categorie':categories, 'defaultCategory':catName, 
+            'defaultActivity':actName, 'name':userName,'dataArray':temp,'labelArray':date});
+  }
+
 
   //Why is this line here?
   //data.users.push(newUser);
+  
 }
 
 function dateToString(){

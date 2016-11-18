@@ -8,6 +8,7 @@ exports.editValue = function(req, res){
   var day = req.query.day;
   var edit = req.query.edit;
   var categories=req.query.categories;
+  var main = req.query.main;
 
    console.log("userName is "+userName);
    console.log(actName);
@@ -77,11 +78,17 @@ exports.editValue = function(req, res){
     }
   }
  
-  console.log("About to call render main!");
-  console.log("newData is "+newData);
-  console.log("labelArray is "+dates);
-  res.render('main',{'categorie':categories, 'defaultCategory':catName, 
+  // console.log("About to call render main!");
+  // console.log("newData is "+newData);
+  // console.log("labelArray is "+dates);
+  if(main === 'main'){
+      res.render('main',{'categorie':categories, 'defaultCategory':catName, 
             'defaultActivity':actName, 'name':userName,'dataArray':newData,'labelArray':dates});
+  }
+  else{
+    res.render('main2',{'categorie':categories, 'defaultCategory':catName, 
+            'defaultActivity':actName, 'name':userName,'dataArray':newData,'labelArray':dates});
+  }
 }
 
 function editDay(day,edit,activity){

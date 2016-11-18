@@ -4,7 +4,7 @@ exports.deleteActivities = function(req, res) {
 
   // Your code goes here
   console.log("yay, deleteActivity just ran!");
-
+  var main = req.query.main;
   //var userName = req.query.name;
   var userName = req.query.myName;
   //console.log(userName);
@@ -76,6 +76,12 @@ exports.deleteActivities = function(req, res) {
 
   console.log('break')
 
-  res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 'currentCategory':catName, 'currentActivity':actName,
+  if(main == 'main'){
+      res.render('main',{'categorie':categories, 'defaultCategory':defaultCategory, 'currentCategory':catName, 'currentActivity':actName,
       'defaultActivity':defaultActivity, 'name':userName, 'dataArray':defaultArray,'labelArray':defaultLabelArray});
+  }
+  else{
+    res.render('main2',{'categorie':categories, 'defaultCategory':defaultCategory, 'currentCategory':catName, 'currentActivity':actName,
+      'defaultActivity':defaultActivity, 'name':userName, 'dataArray':defaultArray,'labelArray':defaultLabelArray});
+  }
 }
