@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+
+<!-- <div class="container" style="margin-top: 15px;">
+  <a href="/main/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{defaultArray}}/{{labelArray}}"></a>
+</div> -->
+
+
+<div class="container" style="margin-top: 15px;">
+    <a href="/main2/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{defaultArray}}/{{labelArray}}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+</div>
+
+<div class="container">
+
+    <h1 class="jumbotron" style="text-align: center; font-family: 'Rubik', sans-serif; font-size: 40px;"><strong>New Exercise</strong></h1>
+
+  <!--   <form action="addActivity/{{uname}}/"> -->
+    <form action="/addActivity/">
+      <input name="main" value="main2" style="display:none;">
+      <input name="myName" value="{{name}}" style="display:none;">
+      <input name="activity" value="{{defaultActivity}}" style="display:none;">
+      <input name="category" value="{{defaultCategory}}" style="display:none;">
+      <input name="data" value="{{defaultArray}}" style="display:none;">
+      <input name="dates" value="{{labelArray}}" style="display:none;">
+
+      <div class="container">
+        <label for="cat"><b>Category:</b></label>
+        <select name="categ" class="selectpicker" data-width="100%" id="cat">
+          <option value="Abs">Abs</option>
+          <option value="Chest">Chest</option>
+          <option value="Shoulders">Shoulders</option>
+          <option value="Triceps">Triceps</option>
+          <option value="Back">Back</option>
+          <option value="Biceps">Biceps</option>
+          <option value="Cardio">Cardio</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <br>
+
+      <div class="container form-group">
+
+        <label for="act"><b>Activity:</b></label>
+        <input type="text" class="form-control" placeholder="Enter Exercise Name" name="actName" id="act" required>
+
+      </div>
+
+      <button type="submit" id="createdActivity" style="margin-left: 15px;" class="btn btn-success btn-lrg">Create New Exercise</button>
+      
+    </form>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/javascript/jquery-activity.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+</body>
+</html>
