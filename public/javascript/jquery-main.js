@@ -105,6 +105,7 @@ function logout()
 function help()
 {
   window.location.href = "/help/";
+
 }
 	// function addtoGraph(event)
 	// {
@@ -123,8 +124,6 @@ function renderTable(array,labelArray){
 
 	for(element=0; element < array.length; element++){
 
-		console.log("label is "+ labelArray[element]);
-		console.log("element is "+ array[element]);
 		label=String(labelArray[element])
 		console.log("Label is "+label);
 		console.log("Type is  " +typeof(label));

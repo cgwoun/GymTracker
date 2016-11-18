@@ -4,6 +4,7 @@ exports.view = function(req, res){
 
   var name = req.params.name;
 
+
   //Gets the categories for the specific user
   var categories;
   for(var index in data.users){

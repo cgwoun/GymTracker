@@ -106,6 +106,10 @@ function logout()
 {
   window.location.href = "/";
 }
+function help()
+{
+  window.location.href = "/help";
+}
 	// function addtoGraph(event)
 	// {
 	// 	if(currentActivity=="")
