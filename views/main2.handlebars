@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<meta httmp-equiv="X-ua-Compatible" content = "IE=edge">
+	<meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+<!-- 	<link rel="stylesheet" href="/javascript/blueberry.css" /> -->
+
+<!-- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+    <link rel ="stylesheet" href="/css/style-footer.css" type = "text/css" />
+    <link rel ="stylesheet" href="/css/style-main.css" type = "text/css" />
+
+<!-- 	<link rel="stylesheet" href="/javascript/animate.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Raleway|Fredoka+One|Oxygen|Lato' rel='stylesheet' type='text/css'>
+	<script src="/jquery/dist/jquery.js"></script>
+	<script src="/javascript/wow.min.js"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+	<!--The javascript code for charts! -->
+	<script src="/javascript/Chart.bundle.js"></script>
+
+	<!--The javascript code for main! -->
+	<script type="text/javascript" src="/javascript/jquery-altMain.js"></script>
+	
+</script>
+	
+</head>
+<header>
+		<nav id="navy">
+			<a href="#" id="disabledLogo">Gymtracker</a>
+			<div class="info">
+			<a id='helpBtn' style="font-family: 'Rubik', sans-serif;" href="/help/">Help</a>
+            <!-- <a id='logoutBtn' href="/">Log Out</a> -->
+			<button style="font-family: 'Rubik', sans-serif;" onclick="return logout();"  class="btn btn-danger">Logout</button>
+
+			</div>
+		</nav>
+	</header>
+<body>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+<!--             <a class="navbar-brand disabled" href="#">GymTracker</a>        
+ -->        </div>
+        <div class="navbar-collapse collapse">
+           <ul class="nav navbar-nav">
+                <li class="dropdown">
+                	<li><a class="activity" href="/activity/{{name}}"><strong>Add an Exercise</strong></a></li>
+                    {{#each categorie}}
+                	<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{categoryName}}<b class="caret"></b></a>
+	                	<ul class="dropdown-menu" role="menu">
+		                	{{#each activities}}
+		                  	<!-- Change this later to list all activities for a specific user using jquery-->
+		                    	<li><a class="activity" href="/main/{{../../name}}/{{../categoryName}}/{{activityName}}/[]/[]">{{activityName}}</a></li>
+		                    {{/each}}
+		                    <!-- <li class="addActivity"><a class="activity" href="#">Add an activity!</a></li> -->
+	                  	</ul>
+                	</li>
+                	{{/each}}
+                	<!-- <li><a href="/help/">Help</a></li>
+                	<li><a href="/">Log Out</a></li> -->
+                </li>
+           </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!-- THIS IS WHERE I READ THE DATA FROM JSON FILE.-->
+  </div>
+  		
+
+  		<div class="container" style="margin-top: 40px;">
+			<div id="main">
+					<div class="text container" style="text-align: center;">
+						<h3 style="font-family: 'Rubik', sans-serif;"><u><b>{{defaultActivity}}</b></u></h3>
+					</div>
+					<!--This is the chart!-->
+					<canvas id="myChart"></canvas>
+
+				<!-- Table -->
+				<div class="container">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						    <h4 style="font-family: 'Rubik', sans-serif;">
+						        <b>{{defaultActivity}}<b>
+						    </h4>
+						</div>
+						<div style="height: 170px; overflow: auto;">
+							<table class="table table-striped">
+							  <thead>
+							    <tr>
+							      <th style="font-family: 'Rubik', sans-serif;" class="col-xs-6">Day</th>
+							      <th style="font-family: 'Rubik', sans-serif;" class="col-xs-6">Repetitions</th>
+							    </tr>
+							  </thead>
+							  <tbody id="tableBody">
+							    <!-- The table contents go here(rendered in jquery-main.js) -->
+
+							  </tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Input Form and Button -->
+					<form action="/addData/">
+						<div class="input-group">
+							<input name="myName" value="{{name}}" style="display:none;">
+							<input name="activity" value="{{defaultActivity}}" style="display:none;">
+							<input name="category" value="{{defaultCategory}}" style="display:none;">
+							<input name="categories" value="{{categorie}}" style="display:none;">
+							<input name="number" type="text" class="form-control" placeholder="Number of Repetitions" required>
+						  <span class="input-group-btn">
+						    <button style="font-family: 'Rubik', sans-serif;" id="graph-button" type="submit" class="btn btn-primary">Add Repetitions!</button>
+						  </span>
+						</div>
+					</form>
+
+					<form action="/editData/">
+						<div class="input-group">
+							<input name="myName" value="{{name}}" style="display:none;">
+							<input name="activity" value="{{defaultActivity}}" style="display:none;">
+							<input name="category" value="{{defaultCategory}}" style="display:none;">
+							<input name="categories" value="{{categorie}}" style="display:none;">
+						</div>
+						<div style="margin-top: 15px; overflow: auto;">			
+							<table >
+									<tr>
+								  	<th>
+								    	<input id="editDay" name="day" type="text" class="form-control" placeholder="Day to Edit" required>
+								    </th>
+								    <th>
+										<input name="edit" type="text" class="form-control" placeholder="Change to?" required>
+									</th>
+									<th>
+										<button onclick="return confirmEdit();" style="font-family: 'Rubik', sans-serif;" id="graph-button" type="submit" class="btn btn-danger">Edit Repetition</button>
+									</th>
+									</tr>
+							</table>
+						</div>
+					</form>	
+					<form action="/deleteActivity/">
+						<div style="margin-top: 15px;" class="text-center">
+							<input name="myName" value="{{name}}" style="display:none;">
+							<input name="activity" value="{{defaultActivity}}" style="display:none;">
+							<input name="category" value="{{defaultCategory}}" style="display:none;">
+							<input name="categories" value="{{categorie}}" style="display:none;">
+						  	<span>
+						    	<button style="font-family: 'Rubik', sans-serif;" onclick="return confirmDelete();" type="submit" class="btn btn-danger">Delete Activity</button>
+						  	</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<a id="array" style="display:none;">{{dataArray}}</a>
+		<a id="labelArray" style="display:none;">{{labelArray}}</a>
+
+		<script src="/javascript/bootstrap.js"></script>
+		
+</body>
+<footer id="contact">
+	<div class="wow zoomIn animated" data-wow-delay="0.2s center-block">
+		<section>
+			<h3><b> GymTracker .Inc</b> </h3>
+			<p><b>650-520-0599</b><br><br>
+				gymtracker@gmail.com<br><br>
+			</p>
+		</section>
+
+
+	</div>
+</footer>
+</html>
+
