@@ -121,18 +121,12 @@ function renderTable(array,labelArray){
 
 		console.log("label is "+ labelArray[element]);
 		console.log("element is "+ array[element]);
-<<<<<<< HEAD
 		label=String(labelArray[element])
 		console.log("Label is "+label);
 		console.log("Type is  " +typeof(label));
 		//var html="<tr><td style='cursor:pointer;' onclick='setDate("+String(label)+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
 		var html="<tr><td style='cursor:pointer;' onclick='setDate("+'"'+labelArray[element]+'"'+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
-=======
-		//label=labelArray[element].slice(-1);
 
-		var html="<tr><td style='cursor:pointer;' onclick='setDate("+labelArray[element]+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
-
->>>>>>> 617fba871a566aa85115f050c788b5089673af1a
 
 		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
 
