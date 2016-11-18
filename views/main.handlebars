@@ -36,9 +36,7 @@
 		<nav id="navy">
 			<a href="#" id="disabledLogo">Gymtracker</a>
 			<div class="info">
-<!-- 			<a id='helpBtn' style="font-family: 'Rubik', sans-serif;" href="/help/">Help</a>
- -->			<button style="font-family: 'Rubik', sans-serif;" onclick="return help();"  class="btn btn-primary">Q & A </button>
-
+			<a id='helpBtn' style="font-family: 'Rubik', sans-serif;" href="/help/">Help</a>
             <!-- <a id='logoutBtn' href="/">Log Out</a> -->
 			<button style="font-family: 'Rubik', sans-serif;" onclick="return logout();"  class="btn btn-danger">Logout</button>
 
@@ -60,7 +58,7 @@
         <div class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
                 <li class="dropdown">
-                	<li><a class="activity" href="/activity/{{name}}"><strong>Add an Exercise</strong></a></li>
+                	<li><a class="activity" href="/activity/main/{{name}}"><strong>Add an Exercise</strong></a></li>
                     {{#each categorie}}
                 	<li>
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{categoryName}}<b class="caret"></b></a>
@@ -132,6 +130,7 @@
 
 					<form action="/editData/">
 						<div class="input-group">
+							<input name="main" value="main" style="display:none;">
 							<input name="myName" value="{{name}}" style="display:none;">
 							<input name="activity" value="{{defaultActivity}}" style="display:none;">
 							<input name="category" value="{{defaultCategory}}" style="display:none;">
@@ -155,6 +154,7 @@
 					</form>	
 					<form action="/deleteActivity/">
 						<div style="margin-top: 15px;" class="text-center">
+							<input name="main" value="main" style="display:none;">
 							<input name="myName" value="{{name}}" style="display:none;">
 							<input name="activity" value="{{defaultActivity}}" style="display:none;">
 							<input name="category" value="{{defaultCategory}}" style="display:none;">

@@ -56,6 +56,7 @@ app.get('/login', login.view);
 app.get('/motivate', motivate.view);
 app.get('/validation', validation.validate);
 app.get('/activity/:name', activity.view);
+// app.get('/activity/main2/:name', activity.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main2.view);
 app.get('/addUser', addUser.addUsers);
