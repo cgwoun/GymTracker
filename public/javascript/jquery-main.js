@@ -125,6 +125,7 @@ function renderTable(array,labelArray){
 		//var html="<tr><td style='cursor:pointer;' onclick='setDate("+String(label)+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
 		var html="<tr><td style='cursor:pointer;' onclick='setDate("+'"'+labelArray[element]+'"'+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
 
+
 		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
 
 
