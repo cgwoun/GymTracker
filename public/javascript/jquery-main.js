@@ -123,7 +123,7 @@ function renderTable(array,labelArray){
 		console.log("element is "+ array[element]);
 		//label=labelArray[element].slice(-1);
 
-		var html="<tr><td style='cursor:pointer;' onclick='setDate('+label+')'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
+		var html="<tr><td style='cursor:pointer;' onclick='setDate("+labelArray[element]+")'>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
 
 
 		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
@@ -132,7 +132,7 @@ function renderTable(array,labelArray){
 	// for(element in array){
 	// 	//console.log("element is "+ array[element]);
 	// 	label=labelArray[element].slice(-1);
-	// 	var html="<tr><td style='cursor:pointer;' onclick='setDate("+label+")'>"+label+"</td><td>"+array[element]+"</td></tr>";
+	//  	var html="<tr><td style='cursor:pointer;' onclick='setDate("+label+")'>"+label+"</td><td>"+array[element]+"</td></tr>";
 
 		//console.log(html);
 		$("#tableBody").append (html);
@@ -145,6 +145,7 @@ function setDate(label){
     var whoCalledMe=$(this);
     console.log(whoCalledMe);
     console.log("whoCalled me text"+whoCalledMe);
+    console.log(label);
     console.log($("#editDay"));
     $("#editDay").val(label);
 }
