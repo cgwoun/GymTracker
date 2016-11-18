@@ -23,6 +23,7 @@ var help = require('./routes/help')
 var validation = require('./routes/validation');
 
 var activity = require('./routes/activity');
+var activity2 = require('./routes/activity2');
 var motivate = require('./routes/motivate');
 
 // Example route
@@ -56,7 +57,7 @@ app.get('/login', login.view);
 app.get('/motivate', motivate.view);
 app.get('/validation', validation.validate);
 app.get('/activity/:name', activity.view);
-// app.get('/activity/main2/:name', activity.view);
+app.get('/activity2/:name', activity2.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main2.view);
 app.get('/addUser', addUser.addUsers);

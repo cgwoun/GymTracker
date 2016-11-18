@@ -7,6 +7,7 @@ exports.addActivities = function(req, res) {
 
   //var userName = req.query.name;
   var userName = req.query.myName;
+  var main = req.query.main;
   console.log(userName);
 
   var catName = req.query.categ;
@@ -44,6 +45,12 @@ exports.addActivities = function(req, res) {
 
   // res.render('activity',{'defaultCategory':defaultCategory, 
   //           'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name});
-  res.render('activity',{'defaultCategory':defaultCategory, 
+  if(main === 'main'){
+    res.render('activity',{'defaultCategory':defaultCategory, 
       'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray,'labelArray':defaultLabelArray});
+  }
+  else{
+    res.render('activity2',{'defaultCategory':defaultCategory, 
+      'defaultActivity':defaultActivity, 'name':userName, 'defaultArray':defaultArray,'labelArray':defaultLabelArray});
+  }
 }
