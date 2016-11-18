@@ -98,6 +98,10 @@ function confirmEdit()
   else
     return false;
 }
+function help()
+{
+  window.location.href = "/help/";
+}
 function logout()
 {
   window.location.href = "/";

@@ -104,7 +104,8 @@ function logout()
 }
 function help()
 {
-  window.location.href = "/help";
+  window.location.href = "/help/";
+
 }
 	// function addtoGraph(event)
 	// {
