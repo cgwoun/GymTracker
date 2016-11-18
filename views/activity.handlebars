@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/javascript/activity.js"></script>
-
 <body>
 
 <!-- <div class="container" style="margin-top: 15px;">
@@ -17,11 +15,9 @@
 </div> -->
 
 
-<div id="back" class="container" style="margin-top: 15px;">
-      
-
+<div class="container" style="margin-top: 15px;">
+    <a href="/main/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{defaultArray}}/{{labelArray}}"><span class="glyphicon glyphicon-chevron-left"></span></a>
 </div>
-<a id="data" style="display:none;">/{{name}}/{{defaultCategory}}/{{defaultActivity}}/{{defaultArray}}/{{labelArray}}</a>
 
 <div class="container">
 
@@ -29,7 +25,7 @@
 
   <!--   <form action="addActivity/{{uname}}/"> -->
     <form action="/addActivity/">
-    <input name="main" value="main" style="display:none;">
+      <input name="main" value="main" style="display:none;">
       <input name="myName" value="{{name}}" style="display:none;">
       <input name="activity" value="{{defaultActivity}}" style="display:none;">
       <input name="category" value="{{defaultCategory}}" style="display:none;">
