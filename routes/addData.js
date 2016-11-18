@@ -9,7 +9,7 @@ exports.addValue = function(req, res){
   var categories=req.query.categories;
 
 
-   
+  var today;
   for(i=0; i<data.users.length; i++){
   	if(data.users[i].id === userName){
   		for(j=0; j<data.users[i].categories.length; j++){
@@ -24,8 +24,13 @@ exports.addValue = function(req, res){
 
              var date= data.users[i].categories[j].activities[k].dates;
              var dateLength=date.length;
+
+             today = dateToString();
+             console.log("The DATE: " + today);
+
              dateLength++;
-             date.push(dateLength);
+             // date.push(dateLength);
+             date.push(today);
   					 console.log(temp);
   					 break;
             }
@@ -53,4 +58,65 @@ exports.addValue = function(req, res){
 
   //Why is this line here?
   //data.users.push(newUser);
+}
+
+function dateToString(){
+
+  var fullDate;
+  var today = new Date();
+  var year;
+  var monthInteger, monthString;
+  var date;
+
+  year = today.getFullYear();
+  monthInteger = today.getMonth();
+  date = today.getDate();
+
+  monthInteger++;
+
+  // console.log(year + ' ' + ++monthInteger + ' ' + date);
+
+  switch(monthInteger){
+    case 1:
+        monthString = "Jan";
+        break;
+    case 2:
+        monthString = "Feb";
+        break;
+    case 3:
+        monthString = "Mar";
+        break;
+    case 4:
+        monthString = "Apr";
+        break;
+    case 5:
+        monthString = "May";
+        break;
+    case 6:
+        monthString = "Jun";
+        break;
+    case 7:
+        monthString = "Jul";
+        break;
+    case 8:
+        monthString = "Aug";
+        break;
+    case 9:
+        monthString = "Sep";
+        break;
+    case 10:
+        monthString = "Oct";
+        break;
+    case 11:
+        monthString = "Nov";
+        break;
+    default:
+        monthString = "Dec";
+        break;
+  }
+
+  fullDate = monthString  + '. ' + date + ' ' + year;
+
+  return fullDate;
+
 }

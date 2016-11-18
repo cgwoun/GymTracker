@@ -104,10 +104,17 @@ function logout()
 function renderTable(array,labelArray){
 	var iter=1;
 	//console.log("in renderTable "+array)
-	for(element in array){
-		//console.log("element is "+ array[element]);
-		label=labelArray[element].slice(-1);
-		var html="<tr><td>"+label+"</td><td>"+array[element]+"</td></tr>";
+	for(element=0; element < array.length; element++){
+
+		console.log("label is "+ labelArray[element]);
+		console.log("element is "+ array[element]);
+		//label=labelArray[element].slice(-1);
+
+		var html="<tr><td>"+labelArray[element]+"</td><td>"+array[element]+"</td></tr>";
+
+
+		// var html = "<tr><td>what up</td><td>"+array[element]+"</td></tr>";
+
 		//console.log(html);
 		$("#tableBody").append (html);
 		//console.log($("#tableBody"));
@@ -126,10 +133,12 @@ function parseToArray(htmlText)
 function createLabelArray(array){
 	var iter=1;
 	var labelArray=[]
+	var myArray	= array;
 	var myArray=array.split(",");
 	//console.log("in renderTable "+array)
-	for(element in myArray){
-		labelArray.push(("Day"+myArray[element]))
+	for(element = 0; element<myArray.length; element++){
+		labelArray.push(myArray[element]);
+		//console.log(myArray[element]);
 		iter++;
 	}
 	console.log("Label array was "+labelArray);
