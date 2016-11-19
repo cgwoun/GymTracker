@@ -4,7 +4,6 @@ exports.view = function(req, res){
 
   var name = req.params.name;
 
-
   //Gets the categories for the specific user
   var categories;
   for(var index in data.users){
@@ -28,8 +27,6 @@ exports.view = function(req, res){
   		break;
   	}
   }
-
-
 
   res.render('activity',{'defaultCategory':defaultCategory,
   					'defaultActivity':defaultActivity, 'defaultArray':defaultArray, 'name':name,'labelArray':defaultLabelArray});
