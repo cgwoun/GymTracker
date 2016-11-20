@@ -34,7 +34,7 @@
 </head>
 <header>
 		<nav id="navy">
-			<a href="#" id="disabledLogo">Gymtracker</a>
+			<a  id="disabledLogo">Gymtracker</a>
 			<div class="info">
             <!-- <a id='logoutBtn' href="/">Log Out</a> -->
             <button style="font-family: 'Rubik', sans-serif;" onclick="return help();"  class="btn btn-primary">Q & A</button>
@@ -90,7 +90,7 @@
 					</div>
 					<!--This is the chart!-->
 					<canvas id="myChart"></canvas>
-
+				<button style="font-family: 'Rubik', sans-serif;" id="myBtn"  >How this work?</button>
 				<!-- Table -->
 				<div class="container">
 					<div class="panel panel-default">
@@ -172,7 +172,38 @@
 		<a id="labelArray" style="display:none;">{{labelArray}}</a>
 
 		<script src="/javascript/bootstrap.js"></script>
-		
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    	<span class="close">x</span>
+    	<div class="faqHeader">General questions</div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    How to see my progression?
+                </h4>
+            </div>
+            <div class="panel-collapse collapse in">
+                <div class="panel-body">
+                	 <img text-align="center" width="70%"src="/img/help1.png"/> 
+                </div>
+            </div>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    How to add Data?
+                </h4>
+            </div>
+            <div class="panel-collapse collapse in">
+                <div text-align="center"class="panel-body">
+                	<img width="70%"src="/img/help2.png"/> 
+                </div>
+            </div>
+        </div>
+  	</div>
+
+	</div>
 </body>
 <footer id="contact">
 	<div class="wow zoomIn animated" data-wow-delay="0.2s center-block">
