@@ -75,10 +75,9 @@ exports.view = function(req, res){
     }
 
   }
-  
+  var line=true;
   // console.log(categories)
   res.render('main',{'categorie':categories, 'defaultCategory':currentCategory, 
-  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray});
+  					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray,'line':line});
 };
-
 

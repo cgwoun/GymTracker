@@ -59,7 +59,10 @@ app.get('/validation', validation.validate);
 app.get('/activity/:name', activity.view);
 app.get('/activity2/:name', activity2.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
+//app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view2);
+
 app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main2.view);
+
 app.get('/addUser', addUser.addUsers);
 app.get('/addActivity', addActivity.addActivities);
 app.get('/deleteActivity', deleteActivity.deleteActivities);

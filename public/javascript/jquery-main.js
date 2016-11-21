@@ -21,6 +21,8 @@ var ctx;
 
 	// When the user clicks on the button, open the modal 
 	btn.onclick = function() {
+		//Send the event to analytics
+		ga('send',	'event',	'help',	'click');
 		modal.style.display = "block";
 	}
 
