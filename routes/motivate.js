@@ -1,6 +1,11 @@
 var data =require("../userData.json");
 
 exports.view = function(req, res){
+  var grid = data.grid;
+  if(grid)
+    console.log("grid is true");
+  else
+    console.log("grid is false");
   //console.log(req);
   // var nameMenu = req.params.name;
   var nameToShow	=	req.query["uname"];	
@@ -38,6 +43,6 @@ exports.view = function(req, res){
 
   // var query = JSON.stringify(req.query);
 
-  res.render('motivate',{'categorie':categories, 'defaultCategory':defaultCategory, 
+  res.render('motivate',{'categorie':categories, 'grid':grid, 'defaultCategory':defaultCategory, 
   					'defaultActivity':defaultActivity, 'name':nameToShow,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray});
 };

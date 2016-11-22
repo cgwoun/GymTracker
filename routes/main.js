@@ -77,7 +77,14 @@ exports.view = function(req, res){
   }
   var line=true;
   // console.log(categories)
-  res.render('main',{'categorie':categories, 'defaultCategory':currentCategory, 
+
+  if(data.grid){
+    res.render('main2',{'categorie':categories, 'defaultCategory':currentCategory, 
+            'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray,'line':line});
+  }
+  else{
+    res.render('main',{'categorie':categories, 'defaultCategory':currentCategory, 
   					'defaultActivity':currentActivity, 'name':nameMenu,'dataArray':defaultActivityArray,'labelArray':defaultLabelArray,'line':line});
+  }
 };
 

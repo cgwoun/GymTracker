@@ -50,7 +50,7 @@ var ctx;
 		data: {
 			labels: labelArray,
 			datasets: [{
-				label: 'Progression',
+				label: 'Repetition',
 				data: parsedArray,
 				backgroundColor:"rgba(75,192,192,0.75)",
 				pointHoverBackgroundColor:"Red",

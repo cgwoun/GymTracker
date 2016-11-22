@@ -61,6 +61,10 @@ app.get('/activity2/:name', activity2.view);
 app.get('/main/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view);
 //app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main.view2);
 
+//Google analytics
+app.get('/grid', index.viewGrid);
+
+
 app.get('/main2/:name/:defaultCategory/:defaultActivity/:dataArray/:labelArray', main2.view);
 
 app.get('/addUser', addUser.addUsers);
