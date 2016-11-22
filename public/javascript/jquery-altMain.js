@@ -15,6 +15,9 @@ $(document).ready(function()
 	// When the user clicks on the button, open the modal 
 	btn.onclick = function() {
 		modal.style.display = "block";
+
+		//Send google analytics event
+		ga('send',	'event',	'help',	'click');
 	}
 
 	// When the user clicks on <span> (x), close the modal

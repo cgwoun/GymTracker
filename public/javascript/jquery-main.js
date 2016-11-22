@@ -24,6 +24,8 @@ var ctx;
 		//Send the event to analytics
 		ga('send',	'event',	'help',	'click');
 		modal.style.display = "block";
+
+		
 	}
 
 	// When the user clicks on <span> (x), close the modal
