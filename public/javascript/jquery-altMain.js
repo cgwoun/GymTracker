@@ -17,7 +17,6 @@ $(document).ready(function()
 		modal.style.display = "block";
 
 		//Send google analytics event
-		ga('send',	'event',	'help',	'click');
 	}
 
 	// When the user clicks on <span> (x), close the modal
