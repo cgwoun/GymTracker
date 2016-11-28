@@ -169,11 +169,7 @@
 				{
 					"categoryName": "Chest",
 					"activities": [
-						{
-							"activityName": "Push up",
-							"dates" : ["Dec. 12 2015", "Dec. 15 2015", "Dec. 17 2015", "Dec. 22 2015"],
-							"data": [1, 3, 6, 9]
-						}
+						
 					]
 
 				},
