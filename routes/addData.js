@@ -20,20 +20,25 @@ exports.addValue = function(req, res){
             // console.log(data.users[i].categories[j].activities[k])
 
             if(data.users[i].categories[j].activities[k].activityName==actName){
-  					 var temp = data.users[i].categories[j].activities[k].data;
-  					 temp.push(parseInt(aNumber));
+  					  today = dateToString();
+              var date = data.users[i].categories[j].activities[k].dates;
+              var dateLength=date.length;
+              var temp = data.users[i].categories[j].activities[k].data;
+              if(date[dateLength-1] == today){
+                 console.log("in here");
+                 temp[dateLength-1] += parseInt(aNumber);
+              }
+              else{
+                 
+      					 temp.push(parseInt(aNumber));
+                 console.log("The DATE: " + today);
 
-             var date= data.users[i].categories[j].activities[k].dates;
-             var dateLength=date.length;
-
-             today = dateToString();
-             console.log("The DATE: " + today);
-
-             dateLength++;
-             // date.push(dateLength);
-             date.push(today);
-  					 console.log(temp);
-  					 break;
+                 dateLength++;
+                 // date.push(dateLength);
+                 date.push(today);
+      					 console.log(temp);
+      					 break;
+              }
             }
   				}
   			}
